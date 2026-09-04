@@ -21,7 +21,9 @@
     height: 100%;
     background-color: #120208;
     overflow: hidden;
-    font-family: 'Comic Sans MS', 'Nunito', cursive;
+    font-family: 'Comic Sans MS', 'Nunito', 'Segoe UI', cursive, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   /* Intro Sequence */
@@ -106,7 +108,10 @@
     border: 1px solid rgba(255, 153, 204, 0.3);
     border-radius: 12px;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     pointer-events: none; 
+    user-select: none;
+    -webkit-user-select: none;
     
     font-size: 1rem; /* pop text */
     color: #fff;
@@ -141,6 +146,29 @@
     }
   }
 
+  /* Visual cue particle spark for pops */
+  .pop-particle {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 12;
+    font-size: 0.95rem;
+    will-change: transform, opacity;
+    animation: particleFloat 0.75s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  @keyframes particleFloat {
+    0% { 
+      transform: translate(-50%, -50%) scale(0.5); 
+      opacity: 1; 
+    }
+    100% { 
+      transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1.2); 
+      opacity: 0; 
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -164,7 +192,7 @@
     const canvas = document.getElementById('matrix-canvas');
     const ctx = canvas.getContext('2d');
     
-    let matrixInterval;
+    let animId = null;
 
     enterBtn.addEventListener('click', () => {
       intro.style.opacity = '0';
@@ -172,6 +200,7 @@
         intro.style.visibility = 'hidden';
       }, 1500);
 
+      bgMusic.volume = 0.85;
       bgMusic.play().catch(e => {
         console.warn('Audio play failed:', e);
       });
@@ -180,55 +209,66 @@
     });
 
     let drops = [];
-    const fontSize = 16;
-    const columnWidth = 80; /* Squished like alicia */
+    const fontSize = 15;
+    const columnWidth = 42; /* Maximum overwhelming squish */
     const words = ["chomp", "nom", "poke", "pinch", "love", "cutie", "alicia", "chu", "forever", "little alicia", "sister", "my angel", "cuddles", "nibble", "wiggle wiggle", "愛してる", "大好き", "大切", "優しい", "恋", "secret", "fly", "bittersweet", "hesitant", "秘密", "飛ぶ", "甘酸っぱい", "躊躇い", "切ない", "憧れ", "儚い"];
+
+    const pinkShades = [
+      "rgba(255, 182, 193, 0.95)", // soft baby pink
+      "rgba(255, 153, 204, 0.9)",  // sweet bubblegum
+      "rgba(255, 105, 180, 0.95)", // vivid hot pink
+      "rgba(255, 204, 230, 0.88)", // blush
+      "rgba(255, 255, 255, 0.95)", // sparkling white accent
+      "rgba(255, 140, 190, 0.92)"  // rose
+    ];
 
     // a rare chance for a hidden word? Hmm maybe
     function getRandomWord() {
-      if (Math.random() > 0.985) { // ~1.5% chance
+      if (Math.random() > 0.988) { // rare hidden whisper
         return { text: "watching you", color: "rgba(204, 102, 153, 0.65)" }; // slightly darker and transparent
       }
       return { 
         text: words[Math.floor(Math.random() * words.length)], 
-        color: "#ffb3d9" // soft pink
+        color: pinkShades[Math.floor(Math.random() * pinkShades.length)]
+      };
+    }
+
+    // dpi go brrrrr
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function createDrop(posX, yOffset) {
+      return {
+        x: posX,
+        y: yOffset,
+        speed: 0.75 + Math.random() * 0.85,
+        ...getRandomWord()
       };
     }
 
     function initMatrix() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      const columns = Math.floor(canvas.width / columnWidth) + 1;
+      resizeCanvas();
+      const columns = Math.floor(window.innerWidth / columnWidth) + 1;
       drops = [];
       
-      //  multiple drops per column for density
+      // Massive dense saturation: 8 staggered waves per column across the screen
       for (let x = 0; x < columns; x++) {
-        // Wave 1 (Initial load wave)
-        drops.push({
-          x: x * columnWidth + (columnWidth / 2),
-          y: Math.random() * -3, 
-          ...getRandomWord()
-        });
-        // Wave 2 (Staggered higher up)
-        drops.push({
-          x: x * columnWidth + (columnWidth / 2),
-          y: Math.random() * -15 - 5, 
-          ...getRandomWord()
-        });
-        // Wave 3 (Even higher)
-        drops.push({
-          x: x * columnWidth + (columnWidth / 2),
-          y: Math.random() * -30 - 15, 
-          ...getRandomWord()
-        });
+        const posX = x * columnWidth + (columnWidth / 2);
+        for (let w = 0; w < 8; w++) {
+          drops.push(createDrop(posX, (Math.random() * -20) - (w * 7)));
+        }
       }
     }
 
     function drawMatrix() {
-      ctx.fillStyle = 'rgba(18, 2, 8, 0.12)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(18, 2, 8, 0.15)';
+      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
-      ctx.font = fontSize + 'px "Comic Sans MS", cursive';
+      ctx.font = fontSize + 'px "Comic Sans MS", "Nunito", cursive';
       ctx.textAlign = 'center';
 
       for (let i = 0; i < drops.length; i++) {
@@ -238,43 +278,90 @@
         ctx.fillStyle = drop.color;
         ctx.fillText(drop.text, drop.x, y);
 
-        if (y > canvas.height && Math.random() > 0.95) {
-          drop.y = Math.random() * -2;
+        if (y > window.innerHeight && Math.random() > 0.92) {
+          drop.y = Math.random() * -4;
+          drop.speed = 0.75 + Math.random() * 0.85;
           const newWord = getRandomWord();
           drop.text = newWord.text;
           drop.color = newWord.color;
         }
-        drop.y += 1;
+        drop.y += drop.speed;
       }
+    }
+
+    // yummy animation
+    let lastTime = 0;
+    const interval = 45; // faster, thrillingly intense flow
+
+    function loop(currentTime) {
+      if (!lastTime) lastTime = currentTime;
+      const delta = currentTime - lastTime;
+
+      if (delta >= interval) {
+        drawMatrix();
+        lastTime = currentTime - (delta % interval);
+      }
+      animId = requestAnimationFrame(loop);
     }
 
     function startMatrix() {
       initMatrix();
-      if (!matrixInterval) {
-        matrixInterval = setInterval(drawMatrix, 50);
+      if (!animId) {
+        animId = requestAnimationFrame(loop);
       }
     }
 
+    // Smooth smoother smoothie?
     window.addEventListener('resize', () => {
-      if (matrixInterval) {
-        initMatrix();
+      resizeCanvas();
+      const currentCols = Math.floor(window.innerWidth / columnWidth) + 1;
+      for (let x = 0; x < currentCols; x++) {
+        const posX = x * columnWidth + (columnWidth / 2);
+        const hasDrop = drops.some(d => Math.abs(d.x - posX) < 8);
+        if (!hasDrop) {
+          for (let w = 0; w < 8; w++) {
+            drops.push(createDrop(posX, (Math.random() * -15) - (w * 7)));
+          }
+        }
       }
     });
 
-    canvas.addEventListener('click', (e) => {
+    // better compatiabilty hoepfully
+    function triggerPop(x, y) {
       const word = document.createElement('div');
       word.className = 'Love__You click-pop';
       
       word.innerHTML = '❤️>_< <br>love you so much my little Alicia<br>ty for being with me';
       
-      word.style.left = e.clientX + 'px';
-      word.style.top = e.clientY + 'px';
+      word.style.left = x + 'px';
+      word.style.top = y + 'px';
       
       document.body.appendChild(word);
       
+      // hmm maybe next time try adding more visual cues for the pops, nom whatcha reading here, anways I love you even as a sis or anything just know I always have you on my mind and I just hope you'll be happy
       setTimeout(() => {
         word.remove();
-      }, 1200); // hmm maybe next time try adding more visual cues for the pops, nom whatcha reading here, anways I love you even as a sis or anything just know I always have you on my mind and I just hope you'll be happy
+      }, 1200);
+
+      // the new taps been added yay
+      const particles = ['✨', '💖', '🌸', '💕', '⭐'];
+      for (let i = 0; i < 5; i++) {
+        const p = document.createElement('span');
+        p.className = 'pop-particle';
+        p.innerText = particles[Math.floor(Math.random() * particles.length)];
+        p.style.left = x + 'px';
+        p.style.top = y + 'px';
+        const angle = (Math.PI * 2 * i) / 5 + (Math.random() - 0.5) * 0.6;
+        const dist = 30 + Math.random() * 25;
+        p.style.setProperty('--tx', `${Math.cos(angle) * dist}px`);
+        p.style.setProperty('--ty', `${Math.sin(angle) * dist}px`);
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), 750);
+      }
+    }
+
+    canvas.addEventListener('pointerdown', (e) => {
+      triggerPop(e.clientX, e.clientY);
     });
 
   </script>
