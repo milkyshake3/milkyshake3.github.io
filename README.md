@@ -35,7 +35,7 @@ The aesthetic blends aerospace telemetry, architectural grid blueprints, and ret
   - Prefilled `mailto:` action button for rapid outreach.
 
 - **🔐 OPSEC PGP Key & Cryptographic Fingerprint**:
-  - Collapsible drawer revealing verified PGP fingerprint (`4A9F 82B1 C04E 77D3 99B2 18E5 F2D8 66A1 94E2 0B3C`) and armored public key block.
+  - Collapsible drawer revealing verified PGP fingerprint (`ede9 a793 9d24 fe6b cd66 f31d 89b2 16a3 16a5 613e`) and armored public key block.
 
 - **📊 Cyber Scroll Progress Bar & Favicon**:
   - Luminous 1.5px cyan-to-green gradient bar fixed under the top navigation tracking reading depth.
@@ -89,4 +89,4 @@ Then navigate to **`http://localhost:8080/`** in your browser.
 - **Email**: [noelschindlermendoza@gmail.com](mailto:noelschindlermendoza@gmail.com)
 - **GitHub**: [@milkyshake3](https://github.com/milkyshake3)
 - **LinkedIn**: [Noel Mendoza](https://www.linkedin.com/in/noel-mendoza-411618434/)
-- **PGP Fingerprint**: `4A9F 82B1 C04E 77D3 99B2 18E5 F2D8 66A1 94E2 0B3C`
+- **PGP Fingerprint**: `ede9 a793 9d24 fe6b cd66 f31d 89b2 16a3 16a5 613e`
