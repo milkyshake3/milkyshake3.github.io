@@ -18,17 +18,17 @@ The aesthetic blends aerospace telemetry, architectural grid blueprints, and ret
 - **🦅 Living Canvas Background Engine**:
   - Cobalt sky gradient with drifting pixelated clouds and white coordinate grid lines.
   - Authentic 24-frame dot-matrix eagle flapping at 12 FPS, rendered on an architectural pitch grid.
-  - Motion comfort modes: `CALM` (default), `VIVID` (full atmospheric velocity), and `STATIC` (reduced-motion accessibility).
+  - Motion comfort modes: `CALM` (default) and `STATIC` (reduced-motion accessibility).
 
 - **🖥️ Interactive CLI Terminal Drawer (`[ >_ CLI ]`)**:
   - Slide-down CRT terminal overlay with scanlines and command history.
   - Keybindings: Press **``` ` ```** (backtick) / **`~`** or **`ESC`** to toggle.
-  - Recon commands: `whoami`, `skills`, `projects`, `contact`, `pgp`, `sound [on|off]`, `motion [calm|vivid|static]`, `clear`, `exit`.
+  - Recon commands: `whoami`, `skills`, `projects`, `contact`, `pgp`, `sound [on|off]`, `motion [calm|static]`, `clear`, `exit`.
 
 - **🎵 M83-Inspired Native Web Audio Synthesizer**:
   - **100% Offline & Asset-Free**: Synthesized natively using browser `AudioContext` and oscillators — zero MP3/WAV files, zero network bandwidth.
   - Celestial chord progression (**F#m $\rightarrow$ A $\rightarrow$ D $\rightarrow$ E**) with warm low-pass filters, subtle detuning, a deep sub drone, and stratospheric filtered air.
-  - Toggled via top navigation `[ SOUND: OFF / ON ]` or through the CLI.
+  - Active on by default, toggled via top navigation `[ SOUND: ON / OFF ]` or through the CLI.
 
 - **📋 Tactile HUD Toast & One-Click Contact**:
   - One-click **`[ copy email ]`** button with clipboard write and instant luminous HUD toast notification.

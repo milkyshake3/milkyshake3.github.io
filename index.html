@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noel Mendoza // Cybersecurity, Systems &amp; OPSEC</title>
-  <meta name="description" content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
-  
+  <meta name="description"
+    content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
+
   <!-- Inline SVG Favicon (Cyber Dot-Matrix Wing) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23101968'/><circle cx='8' cy='8' r='2.5' fill='%2300ff66'/><path d='M8 24 L16 12 L24 24 L20 24 L16 18 L12 24 Z' fill='%23ffffff'/><circle cx='24' cy='8' r='2.5' fill='%2338f4ff'/></svg>">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23101968'/><circle cx='8' cy='8' r='2.5' fill='%2300ff66'/><path d='M8 24 L16 12 L24 24 L20 24 L16 18 L12 24 Z' fill='%23ffffff'/><circle cx='24' cy='8' r='2.5' fill='%2338f4ff'/></svg>">
 
   <!-- OpenGraph & Twitter Social Cards -->
   <meta property="og:title" content="Noel Mendoza // Cybersecurity, Systems &amp; OPSEC">
-  <meta property="og:description" content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
+  <meta property="og:description"
+    content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://milkyshake3.github.io/">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Noel Mendoza // Cybersecurity, Systems &amp; OPSEC">
-  <meta name="twitter:description" content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
+  <meta name="twitter:description"
+    content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
 
   <style>
     /* ==========================================================================
@@ -30,16 +35,16 @@
       --sky-mid: #2c3da8;
       --sky-deep: #182375;
       --sky-void: #0f164d;
-      
+
       --panel-bg: rgba(15, 22, 77, 0.85);
       --panel-border: rgba(255, 255, 255, 0.25);
       --grid-line: rgba(255, 255, 255, 0.65);
       --grid-dim: rgba(255, 255, 255, 0.20);
-      
+
       --text-white: #ffffff;
       --text-soft: #d5e0ff;
       --text-dim: #8fa2db;
-      
+
       --accent-green: #00ff66;
       --accent-red: #ff4747;
       --accent-cyan: #38f4ff;
@@ -75,12 +80,15 @@
     ::-webkit-scrollbar {
       width: 7px;
     }
+
     ::-webkit-scrollbar-track {
       background: var(--sky-void);
     }
+
     ::-webkit-scrollbar-thumb {
       background: var(--panel-border);
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: var(--text-white);
     }
@@ -223,11 +231,6 @@
       color: var(--accent-warm);
     }
 
-    .btn-motion[data-mode="VIVID"] {
-      border-color: var(--accent-cyan);
-      color: var(--accent-cyan);
-    }
-
     @media (max-width: 600px) {
       .btn-motion span#motion-label {
         font-size: 0.65rem;
@@ -248,20 +251,16 @@
       height: 100vh;
       pointer-events: none;
       z-index: 2;
-      background: 
-        repeating-linear-gradient(
-          0deg,
+      background:
+        repeating-linear-gradient(0deg,
           rgba(0, 0, 0, 0.07) 0px,
           rgba(0, 0, 0, 0.07) 1px,
           transparent 1px,
-          transparent 3px
-        ),
-        radial-gradient(
-          circle at center,
+          transparent 3px),
+        radial-gradient(circle at center,
           transparent 52%,
           rgba(8, 12, 45, 0.30) 85%,
-          rgba(5, 8, 30, 0.60) 100%
-        );
+          rgba(5, 8, 30, 0.60) 100%);
       mix-blend-mode: multiply;
     }
 
@@ -275,10 +274,34 @@
       z-index: 12;
       transition: border-color 0.3s ease;
     }
-    .hud-tl { top: 5rem; left: 1.25rem; border-top: 2px solid; border-left: 2px solid; }
-    .hud-tr { top: 5rem; right: 1.25rem; border-top: 2px solid; border-right: 2px solid; }
-    .hud-bl { bottom: 1.5rem; left: 1.25rem; border-bottom: 2px solid; border-left: 2px solid; }
-    .hud-br { bottom: 1.5rem; right: 1.25rem; border-bottom: 2px solid; border-right: 2px solid; }
+
+    .hud-tl {
+      top: 5rem;
+      left: 1.25rem;
+      border-top: 2px solid;
+      border-left: 2px solid;
+    }
+
+    .hud-tr {
+      top: 5rem;
+      right: 1.25rem;
+      border-top: 2px solid;
+      border-right: 2px solid;
+    }
+
+    .hud-bl {
+      bottom: 1.5rem;
+      left: 1.25rem;
+      border-bottom: 2px solid;
+      border-left: 2px solid;
+    }
+
+    .hud-br {
+      bottom: 1.5rem;
+      right: 1.25rem;
+      border-bottom: 2px solid;
+      border-right: 2px solid;
+    }
 
     /* Tactical Aerospace Telemetry Panel (Top-Right Hero HUD) */
     .hero-telemetry-panel {
@@ -330,9 +353,14 @@
 
     @media (max-width: 820px) {
       .hero-telemetry-panel {
-        display: none; /* Hide secondary telemetry panel on small screens to keep mobile clean */
+        display: none;
+        /* Hide secondary telemetry panel on small screens to keep mobile clean */
       }
-      .hud-tl, .hud-tr, .hud-bl, .hud-br {
+
+      .hud-tl,
+      .hud-tr,
+      .hud-bl,
+      .hud-br {
         display: none;
       }
     }
@@ -372,6 +400,7 @@
         top: 4.5rem;
         left: 1rem;
       }
+
       #ascii-globe {
         font-size: 0.50rem;
         line-height: 0.80;
@@ -640,8 +669,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-4px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-4px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .writeup-section {
@@ -866,9 +902,18 @@
       border-radius: 50%;
       display: inline-block;
     }
-    .terminal-dot.red { background: #ff5f56; }
-    .terminal-dot.yellow { background: #ffbd2e; }
-    .terminal-dot.green { background: #27c93f; }
+
+    .terminal-dot.red {
+      background: #ff5f56;
+    }
+
+    .terminal-dot.yellow {
+      background: #ffbd2e;
+    }
+
+    .terminal-dot.green {
+      background: #27c93f;
+    }
 
     .terminal-title {
       margin-left: 0.5rem;
@@ -897,6 +942,7 @@
       padding: 0 0.25rem;
       transition: color 0.15s ease;
     }
+
     .terminal-close-btn:hover {
       color: var(--text-white);
     }
@@ -913,20 +959,25 @@
       margin-bottom: 0.25rem;
       word-break: break-word;
     }
+
     .terminal-line.banner {
       color: var(--accent-cyan);
       font-weight: 700;
       letter-spacing: 0.05em;
     }
+
     .terminal-line.dim {
       color: var(--text-dim);
     }
+
     .terminal-line.error {
       color: var(--accent-red);
     }
+
     .terminal-line.success {
       color: var(--accent-green);
     }
+
     .term-highlight {
       color: var(--accent-green);
       font-weight: 600;
@@ -1043,8 +1094,440 @@
       padding: 0.8rem;
       border-radius: 3px;
     }
+
+    /* ==========================================================================
+       MOBILE RESPONSIVENESS & TOUCH ADAPTATIONS
+       Desktop (> 768px) remains strictly 100% untouched.
+       ========================================================================== */
+
+    /* Default (Desktop): Hamburger and mobile drawer are hidden */
+    .nav-hamburger-btn {
+      display: none;
+    }
+
+    .mobile-nav-drawer {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+
+      .site-wrapper {
+        padding: 0 1rem;
+      }
+
+      /* Top Navigation Bar */
+      .top-nav {
+        padding: 0.6rem 1rem;
+      }
+
+      .top-nav-inner {
+        position: relative;
+      }
+
+      /* Hide inline desktop nav links */
+      .nav-links {
+        display: none;
+      }
+
+      /* Hamburger Menu Button */
+      .nav-hamburger-btn {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        width: 34px;
+        height: 34px;
+        background: rgba(15, 22, 77, 0.85);
+        border: 1px solid var(--panel-border);
+        border-radius: 3px;
+        cursor: pointer;
+        padding: 6px;
+        transition: all 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .nav-hamburger-btn:hover,
+      .nav-hamburger-btn:focus-visible {
+        border-color: var(--accent-cyan);
+        background: rgba(56, 244, 255, 0.15);
+      }
+
+      .nav-hamburger-btn .hamburger-line {
+        display: block;
+        width: 17px;
+        height: 2px;
+        background-color: var(--text-white);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .nav-hamburger-btn.active .hamburger-line:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .nav-hamburger-btn.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-hamburger-btn.active .hamburger-line:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      /* Slide-down High-Tech Cyber Mobile Drawer */
+      .mobile-nav-drawer {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 16, 56, 0.98);
+        backdrop-filter: blur(16px);
+        border-bottom: 2px solid var(--accent-cyan);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, padding 0.3s ease;
+        z-index: 99;
+        padding: 0 1.25rem;
+      }
+
+      .mobile-nav-drawer.open {
+        max-height: 260px;
+        opacity: 1;
+        pointer-events: auto;
+        padding: 1rem 1.25rem 1.2rem 1.25rem;
+      }
+
+      .mobile-nav-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+
+      .mobile-nav-link {
+        display: block;
+        color: var(--text-soft);
+        text-decoration: none;
+        font-family: var(--font-mono);
+        font-size: 0.92rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        padding: 0.55rem 0.65rem;
+        border-radius: 3px;
+        border-left: 2px solid transparent;
+        transition: all 0.15s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .mobile-nav-link:hover,
+      .mobile-nav-link:active {
+        color: var(--accent-cyan);
+        background: rgba(56, 244, 255, 0.12);
+        border-left-color: var(--accent-cyan);
+        padding-left: 0.95rem;
+      }
+
+      /* Compact Nav Controls */
+      .nav-controls-group {
+        gap: 0.35rem;
+      }
+
+      .btn-motion {
+        font-size: 0.68rem;
+        padding: 0.32rem 0.52rem;
+        gap: 0.3rem;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Hero Section on Mobile */
+      .hero-container {
+        padding: 4.8rem 0 2rem 0;
+        min-height: calc(100vh - 40px);
+      }
+
+      .hero-identity {
+        padding: 1.15rem 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .hero-name {
+        font-size: 1.95rem;
+        letter-spacing: -0.01em;
+        line-height: 1.15;
+      }
+
+      .hero-tagline {
+        font-size: 0.88rem;
+        line-height: 1.5;
+        margin-bottom: 1.2rem;
+      }
+
+      .hero-cta-row {
+        flex-direction: column;
+        gap: 0.6rem;
+        width: 100%;
+      }
+
+      .hero-cta-row .btn-terminal {
+        width: 100%;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      /* Content Sections */
+      .content-section {
+        padding: 3.8rem 0 1.5rem 0;
+      }
+
+      .section-header {
+        margin-bottom: 1.4rem;
+      }
+
+      .section-title {
+        font-size: 1.35rem;
+      }
+
+      /* About Section */
+      .about-card {
+        padding: 1.25rem 1rem;
+      }
+
+      .about-card p {
+        font-size: 0.9rem;
+        line-height: 1.65;
+        margin-bottom: 0.95rem;
+      }
+
+      .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+        margin-top: 1.2rem;
+      }
+
+      .principle-item {
+        padding: 1rem;
+      }
+
+      /* Projects Section */
+      .project-summary-bar {
+        padding: 1.1rem 1rem;
+        gap: 0.75rem;
+      }
+
+      .project-name {
+        font-size: 1.05rem;
+        line-height: 1.35;
+      }
+
+      .project-short-desc {
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+
+      .project-writeup-body {
+        padding: 0 1rem 1.25rem 1rem;
+        font-size: 0.86rem;
+      }
+
+      /* Skills Section */
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+
+      .skill-block {
+        padding: 1.25rem 1rem;
+      }
+
+      .skill-block-title {
+        font-size: 0.92rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Hire Me / Contact Section */
+      .hire-card {
+        padding: 1.8rem 1rem;
+      }
+
+      .hire-heading {
+        font-size: 1.35rem;
+        line-height: 1.3;
+      }
+
+      .hire-intro {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.4rem;
+      }
+
+      .hire-actions-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+
+      .hire-actions-row .btn-terminal {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.84rem !important;
+        padding: 0.75rem 1rem !important;
+        white-space: normal;
+        text-align: center;
+        word-break: break-word;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: center;
+        font-size: 0.84rem;
+      }
+
+      .contact-links span {
+        display: none;
+      }
+
+      .contact-link {
+        word-break: break-all;
+      }
+
+      .pgp-content {
+        padding: 1rem 0.8rem;
+      }
+
+      .pgp-fingerprint {
+        font-size: 0.72rem;
+        word-break: break-all;
+      }
+
+      .pgp-key-block {
+        font-size: 0.68rem;
+        max-height: 140px;
+        padding: 0.6rem;
+      }
+
+      /* Footer */
+      .site-footer {
+        padding: 2.8rem 0 2rem 0;
+        margin-top: 2.5rem;
+        font-size: 0.75rem;
+      }
+
+      /* HUD Toast centered on mobile */
+      .hud-toast {
+        left: 50%;
+        right: auto;
+        bottom: 1.5rem;
+        transform: translateX(-50%) translateY(12px);
+        width: calc(100% - 2rem);
+        max-width: 360px;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0.65rem 1rem;
+      }
+
+      .hud-toast.visible {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      /* Terminal Drawer Mobile Fit */
+      .terminal-drawer {
+        height: 72vh;
+        max-height: 80vh;
+      }
+
+      .terminal-hint {
+        display: none;
+      }
+
+      .terminal-close-btn {
+        font-size: 1.5rem;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .terminal-drawer-body {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
+      }
+
+      .terminal-drawer-input-row {
+        padding: 0.55rem 1rem;
+      }
+
+      .terminal-prompt {
+        font-size: 0.78rem;
+        margin-right: 0.45rem;
+      }
+
+      .terminal-input {
+        font-size: 0.82rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .globe-top-left {
+        top: 4.2rem;
+        left: 0.8rem;
+      }
+
+      #ascii-globe {
+        display: none;
+        /* Hide heavy 54-char text matrix on phones to keep sky and eagle clear */
+      }
+
+      .globe-telemetry-tag {
+        font-size: 0.62rem;
+        letter-spacing: 0.08em;
+      }
+
+      #globe-telemetry-readout {
+        font-size: 0.62rem;
+        margin-top: 0.15rem;
+      }
+    }
+
+    @media (max-width: 540px) {
+
+      #audio-label,
+      #motion-label {
+        display: none;
+      }
+
+      .btn-motion {
+        padding: 0.35rem 0.5rem;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .hero-name {
+        font-size: 1.75rem;
+      }
+
+      .nav-brand span:last-child {
+        font-size: 0.82rem;
+      }
+
+      .btn-motion {
+        padding: 0.28rem 0.42rem;
+        font-size: 0.65rem;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Full-screen Background Living Canvas (Cobalt sky, clouds, grid, 24-frame eagle, motto) -->
@@ -1070,12 +1553,14 @@
     </div>
     <div class="terminal-drawer-body" id="terminal-output">
       <div class="terminal-line banner">NOEL MENDOZA // SEC-LAB TACTICAL SHELL</div>
-      <div class="terminal-line dim">Type <span class="term-highlight">help</span> to view available recon commands, or <span class="term-highlight">exit</span> to close.</div>
+      <div class="terminal-line dim">Type <span class="term-highlight">help</span> to view available recon commands, or
+        <span class="term-highlight">exit</span> to close.</div>
       <div class="terminal-line">--------------------------------------------------</div>
     </div>
     <div class="terminal-drawer-input-row">
       <span class="terminal-prompt">noel@sec-lab:~$</span>
-      <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command (e.g. whoami, skills, projects, help)..." />
+      <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false"
+        placeholder="type a command (e.g. whoami, skills, projects, help)..." />
     </div>
   </div>
 
@@ -1098,19 +1583,35 @@
         </ul>
       </nav>
       <div class="nav-controls-group">
-        <button id="cli-toggle-btn" class="btn-motion" title="Toggle interactive terminal (` or ~)" aria-label="Toggle CLI terminal">
+        <button id="cli-toggle-btn" class="btn-motion" title="Toggle interactive terminal (` or ~)"
+          aria-label="Toggle CLI terminal">
           <span class="motion-icon">&gt;_</span>
           <span>CLI</span>
         </button>
-        <button id="audio-toggle-btn" class="btn-motion" data-sound="OFF" title="Toggle M83 ambient soundscape" aria-label="Toggle ambient audio">
+        <button id="audio-toggle-btn" class="btn-motion" data-sound="ON" title="Toggle M83 ambient soundscape"
+          aria-label="Toggle ambient audio">
           <span class="motion-icon">♫</span>
-          <span id="audio-label">SOUND: OFF</span>
+          <span id="audio-label">SOUND: ON</span>
         </button>
-        <button id="motion-toggle-btn" class="btn-motion" data-mode="CALM" title="Cycle motion: CALM / VIVID / STATIC" aria-label="Motion control mode">
+        <button id="motion-toggle-btn" class="btn-motion" data-mode="CALM" title="Cycle motion: CALM / STATIC"
+          aria-label="Motion control mode">
           <span class="motion-icon">⚙</span>
           <span id="motion-label">MOTION: CALM</span>
         </button>
+        <button id="nav-menu-btn" class="nav-hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
+    </div>
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-nav-link">[ 01 // about ]</a></li>
+        <li><a href="#projects" class="mobile-nav-link">[ 02 // projects ]</a></li>
+        <li><a href="#skills" class="mobile-nav-link">[ 03 // skills ]</a></li>
+        <li><a href="#hire" class="mobile-nav-link">[ 04 // hire me ]</a></li>
+      </ul>
     </div>
   </header>
 
@@ -1131,12 +1632,18 @@
 
       <!-- Real-Time Aerospace Flight Telemetry Panel -->
       <div class="hero-telemetry-panel" id="hero-telemetry-panel" aria-hidden="true">
-        <div class="telemetry-row"><span class="tel-label">SYSTEM</span><span class="tel-val green">● OPSEC // ARMED</span></div>
-        <div class="telemetry-row"><span class="tel-label">FLIGHT</span><span class="tel-val cyan" id="tel-flight">LIFT +0.2G</span></div>
-        <div class="telemetry-row"><span class="tel-label">ATTITUDE</span><span class="tel-val" id="tel-attitude">+0.4° / -1.2°</span></div>
-        <div class="telemetry-row"><span class="tel-label">RANGE</span><span class="tel-val" id="tel-range">4.82 NM</span></div>
-        <div class="telemetry-row"><span class="tel-label">BEARING</span><span class="tel-val" id="tel-bearing">042° TRUE</span></div>
-        <div class="telemetry-row"><span class="tel-label">GRID PHASE</span><span class="tel-val" id="tel-phase">10.00 px</span></div>
+        <div class="telemetry-row"><span class="tel-label">SYSTEM</span><span class="tel-val green">● OPSEC //
+            ARMED</span></div>
+        <div class="telemetry-row"><span class="tel-label">FLIGHT</span><span class="tel-val cyan" id="tel-flight">LIFT
+            +0.2G</span></div>
+        <div class="telemetry-row"><span class="tel-label">ATTITUDE</span><span class="tel-val" id="tel-attitude">+0.4°
+            / -1.2°</span></div>
+        <div class="telemetry-row"><span class="tel-label">RANGE</span><span class="tel-val" id="tel-range">4.82
+            NM</span></div>
+        <div class="telemetry-row"><span class="tel-label">BEARING</span><span class="tel-val" id="tel-bearing">042°
+            TRUE</span></div>
+        <div class="telemetry-row"><span class="tel-label">GRID PHASE</span><span class="tel-val" id="tel-phase">10.00
+            px</span></div>
       </div>
 
 
@@ -1144,8 +1651,10 @@
       <div class="globe-top-left" id="globe-anchor">
         <div class="globe-telemetry-tag">[SECTOR: ORBIT_0x01 // OPSEC SATELLITE MESH]</div>
         <pre id="ascii-globe" aria-label="Rotating wireframe ASCII globe"></pre>
-        <div id="globe-telemetry-readout" style="font-size:0.64rem; color:var(--text-dim); margin-top:0.35rem; font-family:var(--font-mono); letter-spacing:0.07em;">
-          <span style="color:var(--accent-green);">● TRACKING</span> // <span id="globe-coords">LAT: 37°46'N  LON: 122°25'W</span>
+        <div id="globe-telemetry-readout"
+          style="font-size:0.64rem; color:var(--text-dim); margin-top:0.35rem; font-family:var(--font-mono); letter-spacing:0.07em;">
+          <span style="color:var(--accent-green);">● TRACKING</span> // <span id="globe-coords">LAT: 37°46'N LON:
+            122°25'W</span>
         </div>
       </div>
 
@@ -1184,27 +1693,39 @@
 
       <div class="about-card">
         <p>
-          I am a <strong>first-year Bachelor of Computer Applications (BCA) student</strong> passionate about <strong>Cybersecurity, Systems Programming, and Defensive Operations</strong>. While early in my academic journey, I approach technology from first principles: understanding how applications, memory, and networks actually work before analyzing vulnerabilities.
+          I am a <strong>first-year Bachelor of Computer Applications (BCA) student</strong> passionate about
+          <strong>Cybersecurity, Systems Programming, and Defensive Operations</strong>. While early in my academic
+          journey, I approach technology from first principles: understanding how applications, memory, and networks
+          actually work before analyzing vulnerabilities.
         </p>
         <p>
-          Currently, I am learning <strong>C in university</strong>, developing a strong appreciation for low-level systems, alongside explorations in <strong>C++ and Java</strong>, with active plans to expand into <strong>Python and Rust</strong>. My focus is on building practical projects and developing a holistic, real-world understanding of the cybersecurity industry as a whole.
+          Currently, I am learning <strong>C in university</strong>, developing a strong appreciation for low-level
+          systems, alongside explorations in <strong>C++ and Java</strong>, with active plans to expand into
+          <strong>Python and Rust</strong>. My focus is on building practical projects and developing a holistic,
+          real-world understanding of the cybersecurity industry as a whole.
         </p>
         <p>
-          On the security front, my interests center on <strong>Open Source Intelligence (OSINT)</strong>, <strong>Operational Security (OPSEC)</strong>, and network traffic analysis. Rather than rushing into black-box scanning tools, I spend my time understanding protocols, inspecting packet captures in Wireshark, and preparing for hands-on labs like TryHackMe and HackTheBox.
+          On the security front, my interests center on <strong>Open Source Intelligence (OSINT)</strong>,
+          <strong>Operational Security (OPSEC)</strong>, and network traffic analysis. Rather than rushing into
+          black-box scanning tools, I spend my time understanding protocols, inspecting packet captures in Wireshark,
+          and preparing for hands-on labs like TryHackMe and HackTheBox.
         </p>
 
         <div class="principles-grid">
           <div class="principle-item">
             <div class="principle-title"><span>[+]</span> Low-Level &amp; Systems Grounding</div>
-            <div class="principle-desc">Building strong programming foundations in C/C++ to understand memory, execution flow, and socket communication from the ground up.</div>
+            <div class="principle-desc">Building strong programming foundations in C/C++ to understand memory, execution
+              flow, and socket communication from the ground up.</div>
           </div>
           <div class="principle-item">
             <div class="principle-title"><span>[+]</span> OPSEC &amp; Footprint Defense</div>
-            <div class="principle-desc">Treating privacy and OPSEC as everyday operational hygiene — metadata elimination, identity compartmentalization, and surface reduction.</div>
+            <div class="principle-desc">Treating privacy and OPSEC as everyday operational hygiene — metadata
+              elimination, identity compartmentalization, and surface reduction.</div>
           </div>
           <div class="principle-item">
             <div class="principle-title"><span>[+]</span> Project-Driven Curiosity</div>
-            <div class="principle-desc">Learning through hands-on builds, technical writeups, and continuous exploration of enterprise cybersecurity domains.</div>
+            <div class="principle-desc">Learning through hands-on builds, technical writeups, and continuous exploration
+              of enterprise cybersecurity domains.</div>
           </div>
         </div>
       </div>
@@ -1232,7 +1753,8 @@
               </div>
               <h3 class="project-name">OSINT Self-Audit: Digital Footprint Mapping &amp; Lockdown</h3>
               <p class="project-short-desc">
-                An exhaustive investigation of my personal digital exhaust across search engines, data brokers, and breach caches, paired with an actionable reduction protocol.
+                An exhaustive investigation of my personal digital exhaust across search engines, data brokers, and
+                breach caches, paired with an actionable reduction protocol.
               </p>
             </div>
             <span class="expand-indicator">[+]</span>
@@ -1242,24 +1764,32 @@
             <div class="writeup-section">
               <div class="writeup-heading">Objective &amp; Scope</div>
               <p>
-                To measure my passive exposure across open internet channels using adversarial recon methodologies. The scope spanned public domain records, historical username reuse, breached credential hashes, metadata in legacy document uploads, and automated people-search scrapers.
+                To measure my passive exposure across open internet channels using adversarial recon methodologies. The
+                scope spanned public domain records, historical username reuse, breached credential hashes, metadata in
+                legacy document uploads, and automated people-search scrapers.
               </p>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">Methodology</div>
               <ul class="writeup-list">
-                <li><strong>Username Enumeration:</strong> Queried cross-platform handle presence using custom Python scripts and Sherlock/WhatsMyName against 400+ services.</li>
-                <li><strong>Data Aggregator Recon:</strong> Audited records across LexisNexis, Whitepages, and FastPeopleSearch to identify phone, address, and relative linkages.</li>
-                <li><strong>Exif &amp; Metadata Inspection:</strong> Extracted EXIF geotags and author usernames from archived PDFs and image uploads via ExifTool.</li>
-                <li><strong>Breach Analysis:</strong> Cross-referenced historic personal identifiers against HaveIBeenPwned and DeHashed indices to isolate compromised passwords.</li>
+                <li><strong>Username Enumeration:</strong> Queried cross-platform handle presence using custom Python
+                  scripts and Sherlock/WhatsMyName against 400+ services.</li>
+                <li><strong>Data Aggregator Recon:</strong> Audited records across LexisNexis, Whitepages, and
+                  FastPeopleSearch to identify phone, address, and relative linkages.</li>
+                <li><strong>Exif &amp; Metadata Inspection:</strong> Extracted EXIF geotags and author usernames from
+                  archived PDFs and image uploads via ExifTool.</li>
+                <li><strong>Breach Analysis:</strong> Cross-referenced historic personal identifiers against
+                  HaveIBeenPwned and DeHashed indices to isolate compromised passwords.</li>
               </ul>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">Remediation Implemented</div>
               <p>
-                Enforced strict compartmentalization: submitted CCPA/opt-out removals across 28 data broker repositories, transitioned accounts to unique email aliases using SimpleLogin, replaced shared usernames with randomized handles, and configured automated Google Dork alerting for new indexations.
+                Enforced strict compartmentalization: submitted CCPA/opt-out removals across 28 data broker
+                repositories, transitioned accounts to unique email aliases using SimpleLogin, replaced shared usernames
+                with randomized handles, and configured automated Google Dork alerting for new indexations.
               </p>
             </div>
           </div>
@@ -1276,7 +1806,8 @@
               </div>
               <h3 class="project-name">Synthetic Persona Research: Attribution &amp; Unmasking Vectors</h3>
               <p class="project-short-desc">
-                Constructed an AI-assisted research persona to stress-test correlation mechanisms and understand how synthetic identities leave detectable forensic breadcrumbs.
+                Constructed an AI-assisted research persona to stress-test correlation mechanisms and understand how
+                synthetic identities leave detectable forensic breadcrumbs.
               </p>
             </div>
             <span class="expand-indicator">[+]</span>
@@ -1286,30 +1817,37 @@
             <div class="writeup-section">
               <div class="writeup-heading">Research Context (Non-Deceptive Framing)</div>
               <p>
-                Conducted purely for defensive threat intelligence research: modern cyber threat actors and disinfo campaigns heavily leverage AI-generated personas (sockpuppets). To identify them effectively, defenders must understand the technical correlation vectors that give them away.
+                Conducted purely for defensive threat intelligence research: modern cyber threat actors and disinfo
+                campaigns heavily leverage AI-generated personas (sockpuppets). To identify them effectively, defenders
+                must understand the technical correlation vectors that give them away.
               </p>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">Persona Architecture</div>
               <p>
-                Built a fully contained fictional researcher identity, including synthetic profile imagery generated with latent diffusion, structured backstory timeline, and LLM-assisted linguistic phrasing.
+                Built a fully contained fictional researcher identity, including synthetic profile imagery generated
+                with latent diffusion, structured backstory timeline, and LLM-assisted linguistic phrasing.
               </p>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">Forensic Vulnerabilities Identified</div>
               <ul class="writeup-list">
-                <li><strong>Linguistic Stylometry:</strong> Frequency analysis of sentence length, comma cadence, and idiomatic markers revealed telltale AI tokenization patterns.</li>
-                <li><strong>Activity Temporal Mapping:</strong> Posting timestamps revealed rigid operational hours inconsistent with the persona's purported timezone.</li>
-                <li><strong>Image Artifacts:</strong> Subtle symmetry errors in earlobes, hair borders, and non-repeating background specular highlights detected via frequency domain analysis.</li>
+                <li><strong>Linguistic Stylometry:</strong> Frequency analysis of sentence length, comma cadence, and
+                  idiomatic markers revealed telltale AI tokenization patterns.</li>
+                <li><strong>Activity Temporal Mapping:</strong> Posting timestamps revealed rigid operational hours
+                  inconsistent with the persona's purported timezone.</li>
+                <li><strong>Image Artifacts:</strong> Subtle symmetry errors in earlobes, hair borders, and
+                  non-repeating background specular highlights detected via frequency domain analysis.</li>
               </ul>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">Defensive Takeaway</div>
               <p>
-                Identified key heuristics that investigative analysts can apply to unmask automated disinformation and threat actor sockpuppets without relying on platform telemetry.
+                Identified key heuristics that investigative analysts can apply to unmask automated disinformation and
+                threat actor sockpuppets without relying on platform telemetry.
               </p>
             </div>
           </div>
@@ -1326,7 +1864,8 @@
               </div>
               <h3 class="project-name">Threat Intel Report: CVE Breakdown &amp; MITRE ATT&amp;CK Mapping</h3>
               <p class="project-short-desc">
-                Technical dissection of a critical remote execution vector, mapping exploitation phases to the MITRE matrix with actionable detection rules and system mitigations.
+                Technical dissection of a critical remote execution vector, mapping exploitation phases to the MITRE
+                matrix with actionable detection rules and system mitigations.
               </p>
             </div>
             <span class="expand-indicator">[+]</span>
@@ -1336,24 +1875,31 @@
             <div class="writeup-section">
               <div class="writeup-heading">Executive Summary</div>
               <p>
-                A granular threat intelligence teardown investigating exploitation patterns targeting unauthenticated input deserialization in edge services. Traced the campaign lifecycle from initial vulnerability scanning to interactive command-and-control (C2) persistence.
+                A granular threat intelligence teardown investigating exploitation patterns targeting unauthenticated
+                input deserialization in edge services. Traced the campaign lifecycle from initial vulnerability
+                scanning to interactive command-and-control (C2) persistence.
               </p>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">MITRE ATT&amp;CK Matrix Alignment</div>
               <ul class="writeup-list">
-                <li><strong>Initial Access (T1190):</strong> Exploit Public-Facing Application via crafted HTTP POST payload bypassing front-end WAF inspection.</li>
+                <li><strong>Initial Access (T1190):</strong> Exploit Public-Facing Application via crafted HTTP POST
+                  payload bypassing front-end WAF inspection.</li>
                 <li><strong>Execution (T1059.004):</strong> Unix Shell spawning child process under web daemon UID.</li>
-                <li><strong>Persistence (T1053.003):</strong> Scheduled Task / Cron modification writing base64-encoded curl stage-2 payload.</li>
-                <li><strong>Command &amp; Control (T1071.001):</strong> Encrypted outbound DNS tunneling beaconing periodically to drop hosts.</li>
+                <li><strong>Persistence (T1053.003):</strong> Scheduled Task / Cron modification writing base64-encoded
+                  curl stage-2 payload.</li>
+                <li><strong>Command &amp; Control (T1071.001):</strong> Encrypted outbound DNS tunneling beaconing
+                  periodically to drop hosts.</li>
               </ul>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">Detection Logic &amp; Defenses</div>
               <p>
-                Authored Sigma detection rules to flag anomalous child processes spawned by web server daemons (`nginx`/`apache` launching `sh` or `curl`). Provided iptables egress filtering templates to prohibit unauthorized outbound socket connections.
+                Authored Sigma detection rules to flag anomalous child processes spawned by web server daemons
+                (`nginx`/`apache` launching `sh` or `curl`). Provided iptables egress filtering templates to prohibit
+                unauthorized outbound socket connections.
               </p>
             </div>
           </div>
@@ -1369,7 +1915,8 @@
               </div>
               <h3 class="project-name">Packet Capture &amp; Protocol Anomaly Analysis</h3>
               <p class="project-short-desc">
-                Deep PCAP dissection identifying anomalous TCP flags, unencrypted protocol exfiltration, and beaconing behaviors. Full writeup publishing upon lab conclusion.
+                Deep PCAP dissection identifying anomalous TCP flags, unencrypted protocol exfiltration, and beaconing
+                behaviors. Full writeup publishing upon lab conclusion.
               </p>
             </div>
             <span class="expand-indicator">[—]</span>
@@ -1402,28 +1949,32 @@
                 <span class="skill-name">C Programming</span>
                 <span class="skill-status active">University Core</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Pointers, memory management, low-level I/O, data structures.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Pointers, memory management, low-level I/O, data
+                structures.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">C++ &amp; Java</span>
                 <span class="skill-status active">Foundations</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Object-oriented architecture, structured logic, algorithmic problem-solving.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Object-oriented architecture, structured logic,
+                algorithmic problem-solving.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Linux Systems &amp; CLI</span>
                 <span class="skill-status active">Daily Driver</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Filesystem navigation, permissions, process isolation, shell scripting.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Filesystem navigation, permissions, process
+                isolation, shell scripting.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Git &amp; Technical Writing</span>
                 <span class="skill-status active">Standard</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Version control workflows, Markdown documentation, reproducible code.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Version control workflows, Markdown documentation,
+                reproducible code.</div>
             </li>
           </ul>
         </div>
@@ -1440,28 +1991,32 @@
                 <span class="skill-name">OPSEC &amp; Compartmentalization</span>
                 <span class="skill-status active">Core Philosophy</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Identity hygiene, metadata stripping, leak prevention, alias management.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Identity hygiene, metadata stripping, leak
+                prevention, alias management.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">OSINT &amp; Surface Mapping</span>
                 <span class="skill-status active">Methodology</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Digital footprint auditing, passive reconnaissance, data broker removal.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Digital footprint auditing, passive reconnaissance,
+                data broker removal.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Wireshark &amp; Packet Analysis</span>
                 <span class="skill-status active">Active Practice</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Dissecting TCP/IP streams, protocol inspection, traffic baselines.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Dissecting TCP/IP streams, protocol inspection,
+                traffic baselines.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Threat Landscape &amp; MITRE</span>
                 <span class="skill-status active">Study Track</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Mapping adversary techniques, defensive triage, industry tradecraft.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Mapping adversary techniques, defensive triage,
+                industry tradecraft.</div>
             </li>
           </ul>
         </div>
@@ -1478,28 +2033,32 @@
                 <span class="skill-name">Python &amp; Rust</span>
                 <span class="skill-status learning">Active Pursuit</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Automation scripting, custom recon tools, memory-safe systems.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Automation scripting, custom recon tools,
+                memory-safe systems.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">TryHackMe &amp; HackTheBox</span>
                 <span class="skill-status learning">Target Platforms</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Hands-on labs, guided learning paths, defensive &amp; CTF challenges.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Hands-on labs, guided learning paths, defensive
+                &amp; CTF challenges.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Web Security Fundamentals</span>
                 <span class="skill-status learning">OWASP Top 10</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Analyzing HTTP headers, injection vectors, and secure app design.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Analyzing HTTP headers, injection vectors, and
+                secure app design.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Industry Architecture</span>
                 <span class="skill-status learning">Broad Overview</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Enterprise security operations, SOC roles, and defensive architectures.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Enterprise security operations, SOC roles, and
+                defensive architectures.</div>
             </li>
           </ul>
         </div>
@@ -1519,15 +2078,19 @@
       <div class="hire-card">
         <h3 class="hire-heading">Looking for an enthusiastic, disciplined security mind?</h3>
         <p class="hire-intro">
-          I am a 1st-year BCA student actively seeking <strong>internships, mentorship, junior security analyst roles, or collaborative projects</strong>. If you value low-level curiosity, analytical rigor, and an OPSEC-first mindset, let's connect.
+          I am a 1st-year BCA student actively seeking <strong>internships, mentorship, junior security analyst roles,
+            or collaborative projects</strong>. If you value low-level curiosity, analytical rigor, and an OPSEC-first
+          mindset, let's connect.
         </p>
 
         <!-- Action Buttons: Hire Me Mailto + Instant Copy Button -->
         <div class="hire-actions-row">
-          <a href="mailto:noelschindlermendoza@gmail.com?subject=Hi%20Noel,%20let's%20connect!&body=Hi%20Noel,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect%20regarding%20an%20opportunity%20or%20collaboration.%0A%0AOrganization%20/%20Project:%20%0ARole%20/%20Scope:%20%0A%0ABest%20regards," class="btn-terminal primary" style="font-size: 1rem; padding: 0.85rem 2rem;">
+          <a href="mailto:noelschindlermendoza@gmail.com?subject=Hi%20Noel,%20let's%20connect!&body=Hi%20Noel,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect%20regarding%20an%20opportunity%20or%20collaboration.%0A%0AOrganization%20/%20Project:%20%0ARole%20/%20Scope:%20%0A%0ABest%20regards,"
+            class="btn-terminal primary" style="font-size: 1rem; padding: 0.85rem 2rem;">
             [ initiate contact — open prefilled email ]
           </a>
-          <button id="copy-email-btn" class="btn-terminal" style="font-size: 1rem; padding: 0.85rem 1.75rem;" title="Copy email address to clipboard">
+          <button id="copy-email-btn" class="btn-terminal" style="font-size: 1rem; padding: 0.85rem 1.75rem;"
+            title="Copy email address to clipboard">
             [ copy email ]
           </button>
         </div>
@@ -1535,9 +2098,11 @@
         <div class="contact-links">
           <a href="mailto:noelschindlermendoza@gmail.com" class="contact-link">email: noelschindlermendoza@gmail.com</a>
           <span style="color:var(--panel-border);">•</span>
-          <a href="https://github.com/milkyshake3" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/milkyshake3 ↗</a>
+          <a href="https://github.com/milkyshake3" target="_blank" rel="noopener noreferrer"
+            class="contact-link">github.com/milkyshake3 ↗</a>
           <span style="color:var(--panel-border);">•</span>
-          <a href="https://www.linkedin.com/in/noel-mendoza-411618434/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/noel-mendoza ↗</a>
+          <a href="https://www.linkedin.com/in/noel-mendoza-411618434/" target="_blank" rel="noopener noreferrer"
+            class="contact-link">linkedin.com/in/noel-mendoza ↗</a>
         </div>
 
         <!-- OPSEC PGP Public Key Section -->
@@ -1547,7 +2112,8 @@
           </button>
           <div id="pgp-content" class="pgp-content" style="display: none;">
             <div class="pgp-fingerprint">
-              <span style="color:var(--text-dim);">FINGERPRINT:</span> <span style="color:var(--accent-green);">ede9 a793 9d24 fe6b cd66 f31d 89b2 16a3 16a5 613e</span>
+              <span style="color:var(--text-dim);">FINGERPRINT:</span> <span style="color:var(--accent-green);">ede9
+                a793 9d24 fe6b cd66 f31d 89b2 16a3 16a5 613e</span>
             </div>
             <pre class="pgp-key-block">-----BEGIN PGP PUBLIC KEY BLOCK-----
 mDMEaoBU2RYJKwYBBAHaRw8BAQdAbq6vTEs12FLCDwus2Kmp0bCpSunr0eu8tPrM
@@ -1663,12 +2229,14 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
       // 3. MOTION ACCESSIBILITY & VESTIBULAR COMFORT CONTROLS
       //    Modes:
       //    - 'CALM'  (Default: Grounded camera, tranquil slow breathing, zero motion sickness)
-      //    - 'VIVID' (Richer celestial god rays & starlight motes)
       //    - 'STATIC' (Frozen snapshot for vestibular disorders / migraine sensitivity)
       // -----------------------------------------------------------------------
-      const MOTION_MODES = ['CALM', 'VIVID', 'STATIC'];
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let currentMotionMode = localStorage.getItem('noel_motion_mode') || (prefersReducedMotion ? 'STATIC' : 'CALM');
+      const MOTION_MODES = ['CALM', 'STATIC'];
+      let savedMode = localStorage.getItem('noel_motion_mode');
+      if (!MOTION_MODES.includes(savedMode)) {
+        savedMode = null;
+      }
+      let currentMotionMode = savedMode || 'CALM';
 
       const motionBtn = document.getElementById('motion-toggle-btn');
       const motionLabel = document.getElementById('motion-label');
@@ -1698,22 +2266,29 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         }
       }
 
+      function setMotion(mode) {
+        if (!MOTION_MODES.includes(mode)) return;
+        currentMotionMode = mode;
+        localStorage.setItem('noel_motion_mode', currentMotionMode);
+        updateMotionUI();
+
+        if (currentMotionMode === 'STATIC') {
+          stopAnimation();
+          render(performance.now());
+        } else {
+          stopAnimation();
+          startAnimation();
+        }
+      }
+
       if (motionBtn) {
         motionBtn.addEventListener('click', () => {
           const nextIdx = (MOTION_MODES.indexOf(currentMotionMode) + 1) % MOTION_MODES.length;
-          currentMotionMode = MOTION_MODES[nextIdx];
-          localStorage.setItem('noel_motion_mode', currentMotionMode);
-          updateMotionUI();
-
-          if (currentMotionMode === 'STATIC') {
-            stopAnimation();
-            render(performance.now());
-          } else {
-            stopAnimation();
-            startAnimation();
-          }
+          setMotion(MOTION_MODES[nextIdx]);
         });
       }
+
+      window._setMotionMode = setMotion;
 
       // Scroll-Driven Canvas Dimming (Fades canvas to 15% opacity when reading content)
       window.addEventListener('scroll', () => {
@@ -1766,7 +2341,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         const imgData = cloudCtx.createImageData(gw, gh);
         const data = imgData.data;
         // In CALM mode, use slow tranquil breathing; in STATIC mode, freeze t
-        const t = isStatic ? 0 : now * (currentMotionMode === 'VIVID' ? 0.00035 : 0.00018);
+        const t = isStatic ? 0 : now * 0.00018;
 
         for (let gy = 0; gy < gh; gy++) {
           const ny = gy / gh;
@@ -1823,14 +2398,14 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
       function drawGodRays(now, w, h, mode) {
         const sunX = w * 0.84;
         const sunY = -h * 0.10;
-        const numRays = mode === 'VIVID' ? 7 : 5;
-        const rayAngles = [0.47, 0.53, 0.60, 0.67, 0.74, 0.80, 0.86];
-        const rayWidths = [0.045, 0.075, 0.055, 0.085, 0.050, 0.065, 0.055];
+        const numRays = 5;
+        const rayAngles = [0.47, 0.53, 0.60, 0.67, 0.74];
+        const rayWidths = [0.045, 0.075, 0.055, 0.085, 0.050];
 
         ctx.save();
         const rayLen = Math.max(w, h) * 1.45;
-        const pulseRate = mode === 'VIVID' ? 0.0004 : 0.00015;
-        const baseIntensity = mode === 'VIVID' ? 0.14 : 0.08;
+        const pulseRate = 0.00015;
+        const baseIntensity = 0.08;
 
         for (let i = 0; i < numRays; i++) {
           const rayPulse = mode === 'STATIC' ? baseIntensity : (Math.sin(now * pulseRate + i * 1.15) * 0.03 + baseIntensity);
@@ -2373,11 +2948,13 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
             if ('letterSpacing' in ctx) {
               ctx.letterSpacing = '1.8px';
             }
-          } catch (e) {}
+          } catch (e) { }
 
           const textMetrics = ctx.measureText('grow wings and fly');
           const textLen = textMetrics.width;
-          const textX = screenVRight + Math.max(18, 22 * scale);
+          const textX = isMobile
+            ? Math.min(width - 15, screenVRight + Math.max(12, 18 * scale))
+            : screenVRight + Math.max(18, 22 * scale);
           const textY = reticleCenterY + textLen / 2;
 
           ctx.translate(textX, textY);
@@ -2564,9 +3141,9 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
     function toggleProject(headerEl) {
       const card = headerEl.closest('.project-entry');
       if (!card) return;
-      
+
       const isExpanded = card.classList.contains('expanded');
-      
+
       document.querySelectorAll('.project-entry.expanded').forEach(openCard => {
         if (openCard !== card) {
           openCard.classList.remove('expanded');
@@ -2666,6 +3243,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
       let audioCtx = null;
       let masterGain = null;
       let isAudioPlaying = false;
+      let soundEnabled = true;
       let chordIndex = 0;
       let chordInterval = null;
       let activeOscs = [];
@@ -2685,13 +3263,8 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         [82.41, 164.81, 207.65, 246.94, 329.63]
       ];
 
-      function startAudio() {
-        if (!audioCtx) {
-          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
-        if (audioCtx.state === 'suspended') {
-          audioCtx.resume();
-        }
+      function setupAudioNodes() {
+        if (!audioCtx || !isAudioPlaying || chordInterval) return;
 
         masterGain = audioCtx.createGain();
         masterGain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
@@ -2723,23 +3296,46 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
           noiseGain.connect(masterGain);
           whiteNoise.start();
           activeOscs.push(whiteNoise);
-        } catch (e) {}
+        } catch (e) { }
 
         playChord(CHORDS[chordIndex]);
 
         chordInterval = setInterval(() => {
+          if (!isAudioPlaying) {
+            clearInterval(chordInterval);
+            chordInterval = null;
+            return;
+          }
           chordIndex = (chordIndex + 1) % CHORDS.length;
           playChord(CHORDS[chordIndex]);
         }, 5500);
+      }
+
+      function startAudio(showNotification = true) {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
 
         isAudioPlaying = true;
+        soundEnabled = true;
+
         if (audioBtn) audioBtn.setAttribute('data-sound', 'ON');
         if (audioLabel) audioLabel.textContent = 'SOUND: ON';
-        showToast('[ ♫ M83 AMBIENT SYNTH: ACTIVE ]', 2500);
+        if (showNotification) {
+          showToast('[ ♫ M83 AMBIENT SYNTH: ACTIVE ]', 2500);
+        }
+
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume().then(() => {
+            if (isAudioPlaying) setupAudioNodes();
+          }).catch(() => {});
+        } else {
+          setupAudioNodes();
+        }
       }
 
       function playChord(frequencies) {
-        if (!audioCtx || !isAudioPlaying) return;
+        if (!audioCtx || !isAudioPlaying || audioCtx.state !== 'running' || !masterGain) return;
 
         const chordGain = audioCtx.createGain();
         chordGain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
@@ -2778,38 +3374,47 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
           try {
             chordGain.disconnect();
             filter.disconnect();
-          } catch (e) {}
+          } catch (e) { }
         }, 5600);
       }
 
-      function stopAudio() {
-        if (!audioCtx || !isAudioPlaying) return;
-        clearInterval(chordInterval);
-        chordInterval = null;
+      function stopAudio(showNotification = true) {
+        if (!isAudioPlaying && !soundEnabled) return;
+        isAudioPlaying = false;
+        soundEnabled = false;
 
-        if (masterGain) {
-          masterGain.gain.setValueAtTime(masterGain.gain.value, audioCtx.currentTime);
-          masterGain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.8);
+        if (chordInterval) {
+          clearInterval(chordInterval);
+          chordInterval = null;
         }
 
+        if (masterGain && audioCtx) {
+          try {
+            masterGain.gain.setValueAtTime(masterGain.gain.value, audioCtx.currentTime);
+            masterGain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.8);
+          } catch (e) { }
+        }
+
+        const oscsToStop = activeOscs;
+        activeOscs = [];
         setTimeout(() => {
-          activeOscs.forEach(node => {
-            try { node.stop(); node.disconnect(); } catch (e) {}
+          oscsToStop.forEach(node => {
+            try { node.stop(); node.disconnect(); } catch (e) { }
           });
-          activeOscs = [];
-          isAudioPlaying = false;
         }, 850);
 
         if (audioBtn) audioBtn.setAttribute('data-sound', 'OFF');
         if (audioLabel) audioLabel.textContent = 'SOUND: OFF';
-        showToast('[ ♫ M83 AMBIENT SYNTH: PAUSED ]', 2000);
+        if (showNotification) {
+          showToast('[ ♫ M83 AMBIENT SYNTH: PAUSED ]', 2000);
+        }
       }
 
       function toggleAudio() {
         if (isAudioPlaying) {
-          stopAudio();
+          stopAudio(true);
         } else {
-          startAudio();
+          startAudio(true);
         }
       }
 
@@ -2817,11 +3422,32 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         audioBtn.addEventListener('click', toggleAudio);
       }
 
+      // First-interaction autoplay unlock handler for strict browser audio policies
+      const unlockAudio = () => {
+        if (!soundEnabled) return;
+        if (!audioCtx) {
+          startAudio(false);
+        } else if (audioCtx.state === 'suspended') {
+          audioCtx.resume().then(() => {
+            if (isAudioPlaying && !chordInterval) {
+              setupAudioNodes();
+            }
+          }).catch(() => {});
+        }
+      };
+
+      ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(evt => {
+        window.addEventListener(evt, unlockAudio, { once: true, passive: true });
+      });
+
+      // Initialize sound on by default
+      startAudio(false);
+
       // Expose to window for CLI control
       window._toggleSynth = toggleAudio;
       window._setSynth = (state) => {
-        if (state && !isAudioPlaying) startAudio();
-        if (!state && isAudioPlaying) stopAudio();
+        if (state && !isAudioPlaying) startAudio(true);
+        if (!state && isAudioPlaying) stopAudio(true);
       };
     })();
 
@@ -2894,7 +3520,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
           printLine('  <span class="term-highlight">contact</span>      - Output verified links & email');
           printLine('  <span class="term-highlight">pgp</span>          - Display OPSEC cryptographic fingerprint');
           printLine('  <span class="term-highlight">sound [on|off]</span>- Control M83 ambient synthesizer');
-          printLine('  <span class="term-highlight">motion [calm|vivid|static]</span> - Set canvas motion mode');
+          printLine('  <span class="term-highlight">motion [calm|static]</span> - Set canvas motion mode');
           printLine('  <span class="term-highlight">clear</span>        - Clear the terminal screen');
           printLine('  <span class="term-highlight">exit</span>         - Close the terminal shell');
         },
@@ -2943,11 +3569,16 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         },
         motion: (args) => {
           const mode = (args[0] || '').toUpperCase();
-          if (['CALM', 'VIVID', 'STATIC'].includes(mode)) {
-            localStorage.setItem('noel_motion_mode', mode);
-            location.reload();
+          if (['CALM', 'STATIC'].includes(mode)) {
+            if (window._setMotionMode) {
+              window._setMotionMode(mode);
+              printLine(`[+] Canvas motion set to ${mode}.`, 'success');
+            } else {
+              localStorage.setItem('noel_motion_mode', mode);
+              location.reload();
+            }
           } else {
-            printLine('Usage: motion [calm | vivid | static]', 'error');
+            printLine('Usage: motion [calm | static]', 'error');
           }
         },
         clear: () => {
@@ -2997,6 +3628,59 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         }
       });
     })();
+
+    // -------------------------------------------------------------------------
+    // 9. MOBILE NAVIGATION DRAWER
+    // -------------------------------------------------------------------------
+    (function initMobileNav() {
+      const menuBtn = document.getElementById('nav-menu-btn');
+      const drawer = document.getElementById('mobile-nav-drawer');
+      if (!menuBtn || !drawer) return;
+
+      let isOpen = false;
+
+      function toggleMenu(force) {
+        isOpen = typeof force === 'boolean' ? force : !isOpen;
+        menuBtn.classList.toggle('active', isOpen);
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        drawer.classList.toggle('open', isOpen);
+        drawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      }
+
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      // Close menu when clicking any nav link
+      drawer.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          toggleMenu(false);
+        });
+      });
+
+      // Close menu on click outside
+      document.addEventListener('click', (e) => {
+        if (isOpen && !drawer.contains(e.target) && !menuBtn.contains(e.target)) {
+          toggleMenu(false);
+        }
+      });
+
+      // Close menu on ESC
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen) {
+          toggleMenu(false);
+        }
+      });
+
+      // Close menu if window is resized above 768px
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && isOpen) {
+          toggleMenu(false);
+        }
+      });
+    })();
   </script>
 </body>
+
 </html>
