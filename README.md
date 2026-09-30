@@ -86,7 +86,7 @@ Then navigate to **`http://localhost:8080/`** in your browser.
 
 ## 📡 Verified Recon & Contact
 
-- **Email**: [noelschindlermendoza@gmail.com](mailto:noelschindlermendoza@gmail.com)
+- **Email**: [contact@noelbuilds.dev](mailto:contact@noelbuilds.dev)
 - **GitHub**: [@milkyshake3](https://github.com/milkyshake3)
 - **LinkedIn**: [Noel Mendoza](https://www.linkedin.com/in/noel-mendoza-411618434/)
 - **PGP Fingerprint**: `ede9 a793 9d24 fe6b cd66 f31d 89b2 16a3 16a5 613e`

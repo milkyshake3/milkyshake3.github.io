@@ -1554,7 +1554,8 @@
     <div class="terminal-drawer-body" id="terminal-output">
       <div class="terminal-line banner">NOEL MENDOZA // SEC-LAB TACTICAL SHELL</div>
       <div class="terminal-line dim">Type <span class="term-highlight">help</span> to view available recon commands, or
-        <span class="term-highlight">exit</span> to close.</div>
+        <span class="term-highlight">exit</span> to close.
+      </div>
       <div class="terminal-line">--------------------------------------------------</div>
     </div>
     <div class="terminal-drawer-input-row">
@@ -2085,7 +2086,7 @@
 
         <!-- Action Buttons: Hire Me Mailto + Instant Copy Button -->
         <div class="hire-actions-row">
-          <a href="mailto:noelschindlermendoza@gmail.com?subject=Hi%20Noel,%20let's%20connect!&body=Hi%20Noel,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect%20regarding%20an%20opportunity%20or%20collaboration.%0A%0AOrganization%20/%20Project:%20%0ARole%20/%20Scope:%20%0A%0ABest%20regards,"
+          <a href="mailto:contact@noelbuilds.dev?subject=Hi%20Noel,%20let's%20connect!&body=Hi%20Noel,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect%20regarding%20an%20opportunity%20or%20collaboration.%0A%0AOrganization%20/%20Project:%20%0ARole%20/%20Scope:%20%0A%0ABest%20regards,"
             class="btn-terminal primary" style="font-size: 1rem; padding: 0.85rem 2rem;">
             [ initiate contact — open prefilled email ]
           </a>
@@ -2096,7 +2097,7 @@
         </div>
 
         <div class="contact-links">
-          <a href="mailto:noelschindlermendoza@gmail.com" class="contact-link">email: noelschindlermendoza@gmail.com</a>
+          <a href="mailto:contact@noelbuilds.dev" class="contact-link">email: contact@noelbuilds.dev</a>
           <span style="color:var(--panel-border);">•</span>
           <a href="https://github.com/milkyshake3" target="_blank" rel="noopener noreferrer"
             class="contact-link">github.com/milkyshake3 ↗</a>
@@ -3190,7 +3191,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
     (function initClipboardCopy() {
       const copyBtn = document.getElementById('copy-email-btn');
       if (!copyBtn) return;
-      const email = 'noelschindlermendoza@gmail.com';
+      const email = 'contact@noelbuilds.dev';
 
       copyBtn.addEventListener('click', async () => {
         try {
@@ -3328,7 +3329,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         if (audioCtx.state === 'suspended') {
           audioCtx.resume().then(() => {
             if (isAudioPlaying) setupAudioNodes();
-          }).catch(() => {});
+          }).catch(() => { });
         } else {
           setupAudioNodes();
         }
@@ -3432,7 +3433,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
             if (isAudioPlaying && !chordInterval) {
               setupAudioNodes();
             }
-          }).catch(() => {});
+          }).catch(() => { });
         }
       };
 
@@ -3545,7 +3546,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         },
         contact: () => {
           printLine('VERIFIED RECON TARGETS:', 'banner');
-          printLine('  EMAIL:    <a href="mailto:noelschindlermendoza@gmail.com" style="color:var(--accent-green);">noelschindlermendoza@gmail.com</a>');
+          printLine('  EMAIL:    <a href="mailto:contact@noelbuilds.dev" style="color:var(--accent-green);">contact@noelbuilds.dev</a>');
           printLine('  GITHUB:   <a href="https://github.com/milkyshake3" target="_blank" style="color:var(--accent-cyan);">github.com/milkyshake3 ↗</a>');
           printLine('  LINKEDIN: <a href="https://www.linkedin.com/in/noel-mendoza-411618434/" target="_blank" style="color:var(--accent-cyan);">linkedin.com/in/noel-mendoza ↗</a>');
         },
