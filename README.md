@@ -49,7 +49,8 @@ The aesthetic blends aerospace telemetry, architectural grid blueprints, and ret
 | :--- | :--- |
 | **Used / Foundations** | **C** coursework (pointers, memory, low-level I/O), **C++**, **Java**, **Linux CLI**, **Git**, technical writing |
 | **Research / Practice** | **OPSEC** & privacy research, **OSINT** surface mapping, **Wireshark** & packet analysis, **MITRE ATT&CK** mapping |
-| **Learning Next** | **Python**, **Rust**, security labs, and **OWASP Top 10** fundamentals |
+| **Used / Foundations** | **Python** (Sentinel-Trader), **C**, **C++**, **Java**, **Linux CLI**, **Git**, and technical writing |
+| **Learning Next** | **Rust**, security labs, and **OWASP Top 10** fundamentals |
 | **Frontend Engineering** | Native HTML5 Canvas 2D, Web Audio API, Vanilla JavaScript (ES6+), Modern CSS3 Grid/Flexbox |
 
 ---

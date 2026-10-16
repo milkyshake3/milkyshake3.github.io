@@ -2197,7 +2197,52 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
           </div>
         </article>
 
-        <!-- Project 2: OSINT Self-Audit -->
+        <!-- Project 2: Sentinel-Trader -->
+        <article class="project-entry" id="project-sentinel-trader">
+          <div class="project-summary-bar" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)">
+            <div class="project-headline">
+              <div class="project-tag-row">
+                <span class="tag-badge">PYTHON</span>
+                <span class="tag-badge">TRADING SIMULATION</span>
+                <span class="tag-badge">BINANCE TESTNET</span>
+                <span class="tag-badge dim">CI TESTED</span>
+              </div>
+              <h3 class="project-name">Sentinel-Trader: EMA/RSI Trading Simulation</h3>
+              <p class="project-short-desc">
+                A Python trading system for simulation and Binance Testnet use only, combining EMA/RSI signals with
+                explicit risk controls and an automated test suite running in CI.
+              </p>
+            </div>
+            <span class="expand-indicator">[+]</span>
+          </div>
+
+          <div class="project-writeup-body">
+            <div class="writeup-section">
+              <div class="writeup-heading">Source &amp; Scope</div>
+              <p>
+                <a href="https://github.com/milkyshake3/aasentin-public" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">View Sentinel-Trader on GitHub ↗</a>
+              </p>
+              <p>
+                Built in Python for simulation and Binance Testnet only. It is not connected to live trading.
+              </p>
+            </div>
+
+            <div class="writeup-section">
+              <div class="writeup-heading">Strategy &amp; Safety</div>
+              <ul class="writeup-list">
+                <li><strong>EMA/RSI Strategy:</strong> Combines exponential moving average signals with RSI momentum
+                  conditions to inform simulated entries and exits.</li>
+                <li><strong>Risk Controls:</strong> Applies guardrails designed to keep position sizing and trade
+                  exposure bounded during testing.</li>
+                <li><strong>Verification:</strong> Includes automated tests and continuous integration checks for
+                  repeatable validation.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: OSINT Self-Audit -->
         <article class="project-entry">
           <div class="project-summary-bar" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)">
             <div class="project-headline">
@@ -2250,7 +2295,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
           </div>
         </article>
 
-        <!-- Project 3: Synthetic Persona Research -->
+        <!-- Project 4: Synthetic Persona Research -->
         <article class="project-entry">
           <div class="project-summary-bar" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)">
             <div class="project-headline">
@@ -2308,7 +2353,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
           </div>
         </article>
 
-        <!-- Project 4: Threat Intel Report -->
+        <!-- Project 5: Threat Intel Report -->
         <article class="project-entry">
           <div class="project-summary-bar" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)">
             <div class="project-headline">
@@ -2360,7 +2405,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
           </div>
         </article>
 
-<!-- Project 5: Upcoming Slot -->
+<!-- Project 6: Upcoming Slot -->
         <article class="project-entry" style="opacity: 0.65;">
           <div class="project-summary-bar" style="cursor: default;">
             <div class="project-headline">
@@ -2486,10 +2531,10 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Python</span>
-                <span class="skill-status learning">Starting</span>
+                <span class="skill-status active">Used</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Next: small, documented automation tools for my
-                OSINT workflow.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Used in Sentinel-Trader, a Python trading
+                simulation and Binance Testnet project with EMA/RSI signals, risk controls, and CI-tested workflows.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
@@ -4168,17 +4213,17 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
         },
         skills: () => {
           printLine('TECHNICAL CAPABILITIES:', 'banner');
-          printLine('  [+] <span class="term-highlight">USED / FOUNDATIONS:</span> C coursework, C++ and Java foundations, Linux CLI, Git, technical writing');
+          printLine('  [+] <span class="term-highlight">USED / FOUNDATIONS:</span> Python via Sentinel-Trader, C coursework, C++ and Java foundations, Linux CLI, Git, technical writing');
           printLine('  [+] <span class="term-highlight">RESEARCH / PRACTICE:</span> OPSEC, OSINT methodology, Wireshark, MITRE ATT&CK mapping');
-          printLine('  [+] <span class="term-highlight">LEARNING NEXT:</span> Python, Rust, security labs, web security fundamentals');
         },
         projects: () => {
           printLine('SELECTED PROJECTS & RESEARCH:', 'banner');
           printLine('  01. <a href="#project-portfolio-build" style="color:var(--accent-green); text-decoration:underline;">Portfolio Engine: Living Canvas & CLI Shell [Live + GitHub]</a>');
-          printLine('  02. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">OSINT Self-Audit: Digital Footprint Mapping & Lockdown</a>');
-          printLine('  03. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Synthetic Persona Research: Attribution & Unmasking Vectors</a>');
-          printLine('  04. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Threat Intel Report: CVE Breakdown & MITRE ATT&CK Mapping</a>');
-          printLine('  05. <a href="#projects" style="color:var(--text-dim); text-decoration:none;">Packet Capture & Protocol Anomaly Analysis [In Progress]</a>');
+          printLine('  02. <a href="#project-sentinel-trader" style="color:var(--accent-cyan); text-decoration:underline;">Sentinel-Trader: EMA/RSI Trading Simulation [GitHub]</a>');
+          printLine('  03. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">OSINT Self-Audit: Digital Footprint Mapping & Lockdown</a>');
+          printLine('  04. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Synthetic Persona Research: Attribution & Unmasking Vectors</a>');
+          printLine('  05. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Threat Intel Report: CVE Breakdown & MITRE ATT&CK Mapping</a>');
+          printLine('  06. <a href="#projects" style="color:var(--text-dim); text-decoration:none;">Packet Capture & Protocol Anomaly Analysis [In Progress]</a>');
         },
         build: () => {
           printLine('[+] Opening portfolio architecture & source specs modal...', 'success');
