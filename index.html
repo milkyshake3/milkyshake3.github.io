@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noel Mendoza // Cybersecurity, Systems &amp; OPSEC</title>
+  <title>Noel Mendoza // Software Engineering with a Security Focus</title>
   <meta name="description"
-    content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
+    content="Portfolio of Noel Mendoza — first-year BCA student building software with a security focus, from systems fundamentals to defensive research.">
 
   <!-- Inline SVG Favicon (Cyber Dot-Matrix Wing) -->
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23101968'/><circle cx='8' cy='8' r='2.5' fill='%2300ff66'/><path d='M8 24 L16 12 L24 24 L20 24 L16 18 L12 24 Z' fill='%23ffffff'/><circle cx='24' cy='8' r='2.5' fill='%2338f4ff'/></svg>">
 
   <!-- OpenGraph & Twitter Social Cards -->
-  <meta property="og:title" content="Noel Mendoza // Cybersecurity, Systems &amp; OPSEC">
+  <meta property="og:title" content="Noel Mendoza // Software Engineering with a Security Focus">
   <meta property="og:description"
-    content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
+    content="Portfolio of Noel Mendoza — first-year BCA student building software with a security focus, from systems fundamentals to defensive research.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://milkyshake3.github.io/">
+  <meta property="og:url" content="https://noelbuilds.dev/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Noel Mendoza // Cybersecurity, Systems &amp; OPSEC">
+  <meta name="twitter:title" content="Noel Mendoza // Software Engineering with a Security Focus">
   <meta name="twitter:description"
-    content="Portfolio of Noel Mendoza — 1st-Year BCA student exploring systems programming, cybersecurity, OSINT, and OPSEC.">
+    content="Portfolio of Noel Mendoza — first-year BCA student building software with a security focus, from systems fundamentals to defensive research.">
 
   <style>
     /* ==========================================================================
@@ -1205,8 +1205,17 @@
     }
 
     @keyframes pulseGlow {
-      0%, 100% { opacity: 0.6; transform: scale(0.9); }
-      50% { opacity: 1; transform: scale(1.15); }
+
+      0%,
+      100% {
+        opacity: 0.6;
+        transform: scale(0.9);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.15);
+      }
     }
 
     .build-modal-title {
@@ -1374,12 +1383,31 @@
     }
 
     /* Syntax Tokens */
-    .c-kw { color: #ff7b72; font-weight: 600; }
-    .c-fn { color: #79c0ff; }
-    .c-str { color: #a5d6ff; }
-    .c-num { color: #f2cc60; }
-    .c-comment { color: #8fa2db; font-style: italic; }
-    .prompt { color: var(--accent-green); }
+    .c-kw {
+      color: #ff7b72;
+      font-weight: 600;
+    }
+
+    .c-fn {
+      color: #79c0ff;
+    }
+
+    .c-str {
+      color: #a5d6ff;
+    }
+
+    .c-num {
+      color: #f2cc60;
+    }
+
+    .c-comment {
+      color: #8fa2db;
+      font-style: italic;
+    }
+
+    .prompt {
+      color: var(--accent-green);
+    }
 
     .build-modal-footer-status {
       display: flex;
@@ -1905,10 +1933,10 @@
           <span class="motion-icon">&gt;_</span>
           <span>CLI</span>
         </button>
-        <button id="audio-toggle-btn" class="btn-motion" data-sound="ON" title="Toggle M83 ambient soundscape"
+        <button id="audio-toggle-btn" class="btn-motion" data-sound="OFF" title="Toggle M83 ambient soundscape"
           aria-label="Toggle ambient audio">
           <span class="motion-icon">♫</span>
-          <span id="audio-label">SOUND: ON</span>
+          <span id="audio-label">SOUND: OFF</span>
         </button>
         <button id="motion-toggle-btn" class="btn-motion" data-mode="CALM" title="Cycle motion: CALM / STATIC"
           aria-label="Motion control mode">
@@ -1963,7 +1991,6 @@
             px</span></div>
       </div>
 
-
       <!-- Integrated Top-Left Wireframe ASCII Globe -->
       <div class="globe-top-left" id="globe-anchor">
         <div class="globe-telemetry-tag">[SECTOR: ORBIT_0x01 // OPSEC SATELLITE MESH]</div>
@@ -1978,7 +2005,7 @@
       <!-- Hero Identity & Call to Action (Floating over seamless background) -->
       <div id="hero-identity" class="hero-identity">
         <h1 class="hero-name">Noel Mendoza</h1>
-        <p class="hero-tagline">1st-year BCA student // cybersecurity, systems &amp; OPSEC</p>
+        <p class="hero-tagline">1st-year BCA student // software engineering with a security focus</p>
 
         <div class="hero-cta-row">
           <a href="#hire" class="btn-terminal primary" id="hero-hire-btn">
@@ -1988,7 +2015,7 @@
             [ inspect bio ]
           </a>
           <a href="#projects" class="btn-terminal">
-            [ view writeups ]
+            [ view projects ]
           </a>
         </div>
 
@@ -2011,21 +2038,19 @@
       <div class="about-card">
         <p>
           I am a <strong>first-year Bachelor of Computer Applications (BCA) student</strong> passionate about
-          <strong>Cybersecurity, Systems Programming, and Defensive Operations</strong>. While early in my academic
-          journey, I approach technology from first principles: understanding how applications, memory, and networks
-          actually work before analyzing vulnerabilities.
+          <strong>software engineering with a security focus</strong>. While early in my academic journey, I approach
+          technology from first principles: understanding how applications, memory, and networks actually work before
+          analyzing vulnerabilities.
         </p>
         <p>
           Currently, I am learning <strong>C in university</strong>, developing a strong appreciation for low-level
-          systems, alongside explorations in <strong>C++ and Java</strong>, with active plans to expand into
-          <strong>Python and Rust</strong>. My focus is on building practical projects and developing a holistic,
-          real-world understanding of the cybersecurity industry as a whole.
+          systems, alongside foundations in <strong>C++ and Java</strong>. My focus is on building practical projects
+          and developing reliable software, with security and privacy as important design constraints.
         </p>
         <p>
-          On the security front, my interests center on <strong>Open Source Intelligence (OSINT)</strong>,
-          <strong>Operational Security (OPSEC)</strong>, and network traffic analysis. Rather than rushing into
-          black-box scanning tools, I spend my time understanding protocols, inspecting packet captures in Wireshark,
-          and preparing for hands-on labs like TryHackMe and HackTheBox.
+          My security interests include <strong>Open Source Intelligence (OSINT)</strong>, <strong>Operational
+          Security (OPSEC)</strong>, and network traffic analysis. I use those interests to ask better engineering
+          questions about protocols, privacy, and defensive design.
         </p>
 
         <div class="principles-grid">
@@ -2227,14 +2252,17 @@
           <div class="project-summary-bar" onclick="toggleProject(this)">
             <div class="project-headline">
               <div class="project-tag-row">
-                <span class="tag-badge" style="color:var(--accent-green); background:rgba(0,255,102,0.12); border:1px solid rgba(0,255,102,0.3);">LIVE SYSTEM</span>
+                <span class="tag-badge"
+                  style="color:var(--accent-green); background:rgba(0,255,102,0.12); border:1px solid rgba(0,255,102,0.3);">LIVE
+                  SYSTEM</span>
                 <span class="tag-badge">CANVAS 2D</span>
                 <span class="tag-badge">WEB AUDIO API</span>
                 <span class="tag-badge dim">ZERO-DEP</span>
               </div>
               <h3 class="project-name">Portfolio Engine: Terminal-Style Living Canvas &amp; CLI Shell</h3>
               <p class="project-short-desc">
-                Terminal-style portfolio, no trackers, no external dependencies — engineered from first principles with an offline Web Audio synthesizer, CRT terminal drawer, and authentic 24-frame dot-matrix kinematics.
+                Terminal-style portfolio, no trackers, no external dependencies — engineered from first principles with
+                an offline Web Audio synthesizer, CRT terminal drawer, and authentic 24-frame dot-matrix kinematics.
               </p>
             </div>
             <span class="expand-indicator">[+]</span>
@@ -2242,25 +2270,41 @@
 
           <div class="project-writeup-body">
             <div class="writeup-section">
+              <div class="writeup-heading">Live Site &amp; Source</div>
+              <p>
+                <a href="https://noelbuilds.dev/" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">Open the live site ↗</a>
+                <span style="color:var(--panel-border);"> • </span>
+                <a href="https://github.com/milkyshake3/personal-website" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">View the GitHub repository ↗</a>
+              </p>
+            </div>
+            <div class="writeup-section">
               <div class="writeup-heading">Architecture &amp; Design Principles</div>
               <p>
-                Terminal-style portfolio, no trackers, no external dependencies. Engineered from first principles in a single self-contained file with zero build step, zero third-party scripts, and zero external media assets.
+                Terminal-style portfolio, no trackers, no external dependencies. Engineered from first principles in a
+                single self-contained file with zero build step, zero third-party scripts, and zero external media
+                assets.
               </p>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">Core Features</div>
               <ul class="writeup-list">
-                <li><strong>CLI Shell:</strong> Interactive slide-down CRT terminal with history buffer (`~` / `ESC`) and custom recon commands.</li>
-                <li><strong>Sound Toggle:</strong> M83-inspired native Web Audio API synthesizer with low-pass filters — zero audio files.</li>
-                <li><strong>Calm-Motion Mode:</strong> Dual motion accessibility modes (calm continuous flight vs. static snapshot).</li>
-                <li><strong>ASCII / Dot-Matrix Bird:</strong> Authentic 24-frame dot-matrix eagle flapping loop rendered on an architectural CAD pitch grid.</li>
+                <li><strong>CLI Shell:</strong> Interactive slide-down CRT terminal with history buffer (`~` / `ESC`)
+                  and custom recon commands.</li>
+                <li><strong>Sound Toggle:</strong> M83-inspired native Web Audio API synthesizer with low-pass filters —
+                  zero audio files.</li>
+                <li><strong>Calm-Motion Mode:</strong> Dual motion accessibility modes (calm continuous flight vs.
+                  static snapshot).</li>
+                <li><strong>ASCII / Dot-Matrix Bird:</strong> Authentic 24-frame dot-matrix eagle flapping loop rendered
+                  on an architectural CAD pitch grid.</li>
               </ul>
             </div>
 
             <div class="writeup-section">
               <div class="writeup-heading">Clever Implementation Snippets</div>
-              
+
               <!-- Snippet 1 -->
               <div class="snippet-block">
                 <div class="snippet-header">
@@ -2308,7 +2352,8 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
             </div>
 
             <div class="writeup-section" style="margin-top: 1.3rem;">
-              <button class="btn-terminal primary open-build-modal-btn" type="button" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
+              <button class="btn-terminal primary open-build-modal-btn" type="button"
+                style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
                 [ ↗ launch build specs popup ]
               </button>
             </div>
@@ -2357,7 +2402,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">C Programming</span>
-                <span class="skill-status active">University Core</span>
+                <span class="skill-status active">Coursework</span>
               </div>
               <div style="font-size:0.8rem; color:var(--text-dim);">Pointers, memory management, low-level I/O, data
                 structures.</div>
@@ -2372,8 +2417,8 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
-                <span class="skill-name">Linux Systems &amp; CLI</span>
-                <span class="skill-status active">Daily Driver</span>
+                <span class="skill-name">Linux CLI</span>
+                <span class="skill-status active">Used</span>
               </div>
               <div style="font-size:0.8rem; color:var(--text-dim);">Filesystem navigation, permissions, process
                 isolation, shell scripting.</div>
@@ -2381,7 +2426,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Git &amp; Technical Writing</span>
-                <span class="skill-status active">Standard</span>
+                <span class="skill-status active">Used</span>
               </div>
               <div style="font-size:0.8rem; color:var(--text-dim);">Version control workflows, Markdown documentation,
                 reproducible code.</div>
@@ -2398,8 +2443,8 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
           <ul class="skill-list">
             <li class="skill-entry">
               <div class="skill-meta">
-                <span class="skill-name">OPSEC &amp; Compartmentalization</span>
-                <span class="skill-status active">Daily habit</span>
+                <span class="skill-name">OPSEC &amp; Privacy Research</span>
+                <span class="skill-status active">Research</span>
               </div>
               <div style="font-size:0.8rem; color:var(--text-dim);">Identity hygiene, metadata stripping, leak
                 prevention, alias management.</div>
@@ -2407,7 +2452,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">OSINT &amp; Surface Mapping</span>
-                <span class="skill-status active">Methodology</span>
+                <span class="skill-status active">Research</span>
               </div>
               <div style="font-size:0.8rem; color:var(--text-dim);">Digital footprint auditing, passive reconnaissance,
                 data broker removal.</div>
@@ -2415,15 +2460,15 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Wireshark &amp; Packet Analysis</span>
-                <span class="skill-status active">Active Practice</span>
+                <span class="skill-status active">Practice</span>
               </div>
               <div style="font-size:0.8rem; color:var(--text-dim);">Dissecting TCP/IP streams, protocol inspection,
                 traffic baselines.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
-                <span class="skill-name">Threat Landscape &amp; MITRE</span>
-                <span class="skill-status active">Study Track</span>
+                <span class="skill-name">MITRE ATT&amp;CK Mapping</span>
+                <span class="skill-status active">Study</span>
               </div>
               <div style="font-size:0.8rem; color:var(--text-dim);">Mapping adversary techniques, defensive triage,
                 industry tradecraft.</div>
@@ -2435,40 +2480,40 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
         <div class="skill-block">
           <div class="skill-block-title">
             <span>ROADMAP &amp; LABS</span>
-            <span style="font-size:0.75rem; color:var(--accent-warm);">[IN PROGRESS]</span>
+            <span style="font-size:0.75rem; color:var(--accent-warm);">[LEARNING NEXT]</span>
           </div>
           <ul class="skill-list">
             <li class="skill-entry">
               <div class="skill-meta">
-                <span class="skill-name">Python &amp; Rust</span>
-                <span class="skill-status learning">Active Pursuit</span>
+                <span class="skill-name">Python</span>
+                <span class="skill-status learning">Starting</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Automation scripting, custom recon tools,
-                memory-safe systems.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Planned for small, documented automation tools;
+                not presented as an established skill yet.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
-                <span class="skill-name">TryHackMe &amp; HackTheBox</span>
-                <span class="skill-status learning">Target Platforms</span>
+                <span class="skill-name">Rust &amp; Security Labs</span>
+                <span class="skill-status learning">Future Track</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Hands-on labs, guided learning paths, defensive
-                &amp; CTF challenges.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Planned learning areas after core programming
+                projects.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Web Security Fundamentals</span>
-                <span class="skill-status learning">OWASP Top 10</span>
+                <span class="skill-status learning">Planned</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Analyzing HTTP headers, injection vectors, and
-                secure app design.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">A future study track; no completed lab is claimed
+                here.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
-                <span class="skill-name">Industry Architecture</span>
-                <span class="skill-status learning">Broad Overview</span>
+                <span class="skill-name">Portfolio Engineering</span>
+                <span class="skill-status active">Built</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Enterprise security operations, SOC roles, and
-                defensive architectures.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Self-contained HTML, CSS, JavaScript, Canvas,
+              accessibility modes, and native Web Audio.</div>
             </li>
           </ul>
         </div>
@@ -2486,11 +2531,11 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
       </div>
 
       <div class="hire-card">
-        <h3 class="hire-heading">Looking for a motivated junior security learner?</h3>
+        <h3 class="hire-heading">Looking for a motivated software engineering intern?</h3>
         <p class="hire-intro">
-          I am a 1st-year BCA student actively seeking <strong>internships, mentorship, junior security analyst roles,
-            or collaborative projects</strong>. If you value low-level curiosity, analytical rigor, and an OPSEC-first
-          mindset, let's connect.
+          I am a 1st-year BCA student seeking <strong>software engineering internships, mentorship, or collaborative
+            projects</strong>. I bring low-level curiosity, analytical rigor, and a security-minded approach to
+          building and learning.
         </p>
 
         <!-- Action Buttons: Hire Me Mailto + Instant Copy Button -->
@@ -2546,7 +2591,8 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
       <div class="footer-primary-row">
         <span>noel mendoza // bca &amp; cybersecurity portfolio</span>
         <span class="footer-sep">•</span>
-        <button id="see-build-footer-btn" class="footer-build-btn open-build-modal-btn" type="button" title="View portfolio architecture, features, and source snippets">
+        <button id="see-build-footer-btn" class="footer-build-btn open-build-modal-btn" type="button"
+          title="View portfolio architecture, features, and source snippets">
           [ see the build ]
         </button>
       </div>
@@ -2559,15 +2605,18 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
        PORTFOLIO BUILD SPECIFICATIONS MODAL (POPUP)
        Dual-triggered via [see the build] in footer & Portfolio Project card
        ==================================================================== -->
-  <div id="build-modal" class="build-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="build-modal-title">
+  <div id="build-modal" class="build-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="build-modal-title">
     <div class="build-modal-panel">
       <!-- Modal Header -->
       <div class="build-modal-header">
         <div class="build-modal-header-left">
           <span class="build-pulse-dot"></span>
-          <span id="build-modal-title" class="build-modal-title">// SYSTEM ARCHITECTURE: PORTFOLIO &amp; TELEMETRY ENGINE</span>
+          <span id="build-modal-title" class="build-modal-title">// SYSTEM ARCHITECTURE: PORTFOLIO &amp; TELEMETRY
+            ENGINE</span>
         </div>
-        <button id="build-modal-close-btn" class="build-modal-close-btn" type="button" aria-label="Close build specifications modal">[ESC / ✕]</button>
+        <button id="build-modal-close-btn" class="build-modal-close-btn" type="button"
+          aria-label="Close build specifications modal">[ESC / ✕]</button>
       </div>
 
       <!-- Modal Content Body -->
@@ -2575,26 +2624,31 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
         <!-- Tagline Banner -->
         <div class="build-tagline-box">
           <div class="build-tagline-main">Terminal-style portfolio, no trackers, no external dependencies.</div>
-          <div class="build-tagline-sub">Single-file vanilla HTML5 / CSS3 / ES6 architecture • 100% self-contained • Zero runtime telemetry</div>
+          <div class="build-tagline-sub">Single-file vanilla HTML5 / CSS3 / ES6 architecture • 100% self-contained •
+            Zero runtime telemetry</div>
         </div>
 
         <!-- 4 Core Feature Cards -->
         <div class="build-features-grid">
           <div class="build-feature-card">
             <div class="build-feature-head"><span class="feat-accent">01 //</span> CLI SHELL</div>
-            <div class="build-feature-desc">Interactive slide-down CRT terminal with history buffer (`~` / `ESC`) and custom recon command dispatcher.</div>
+            <div class="build-feature-desc">Interactive slide-down CRT terminal with history buffer (`~` / `ESC`) and
+              custom recon command dispatcher.</div>
           </div>
           <div class="build-feature-card">
             <div class="build-feature-head"><span class="feat-accent">02 //</span> SOUND TOGGLE</div>
-            <div class="build-feature-desc">M83-inspired native Web Audio API synthesizer with low-pass filters and subtle detuning — zero audio files.</div>
+            <div class="build-feature-desc">M83-inspired native Web Audio API synthesizer with low-pass filters and
+              subtle detuning — zero audio files.</div>
           </div>
           <div class="build-feature-card">
             <div class="build-feature-head"><span class="feat-accent">03 //</span> CALM-MOTION MODE</div>
-            <div class="build-feature-desc">Vestibular accessibility toggle allowing seamless switching between calm continuous flight and a static snapshot.</div>
+            <div class="build-feature-desc">Vestibular accessibility toggle allowing seamless switching between calm
+              continuous flight and a static snapshot.</div>
           </div>
           <div class="build-feature-card">
             <div class="build-feature-head"><span class="feat-accent">04 //</span> ASCII / DOT BIRD</div>
-            <div class="build-feature-desc">Authentic 24-frame dot-matrix eagle flapping at 12 FPS, rendered on an architectural CAD pitch grid.</div>
+            <div class="build-feature-desc">Authentic 24-frame dot-matrix eagle flapping at 12 FPS, rendered on an
+              architectural CAD pitch grid.</div>
           </div>
         </div>
 
@@ -2651,7 +2705,8 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
         <!-- Footer status bar within modal -->
         <div class="build-modal-footer-status">
           <span>STATUS: 100% SELF-CONTAINED // ZERO EXTERNAL ASSETS</span>
-          <button class="btn-terminal" id="build-modal-bottom-close" type="button" style="padding:0.4rem 1rem; font-size:0.75rem;">
+          <button class="btn-terminal" id="build-modal-bottom-close" type="button"
+            style="padding:0.4rem 1rem; font-size:0.75rem;">
             [ close ]
           </button>
         </div>
@@ -3763,7 +3818,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
       let audioCtx = null;
       let masterGain = null;
       let isAudioPlaying = false;
-      let soundEnabled = true;
+      let soundEnabled = false;
       let chordIndex = 0;
       let chordInterval = null;
       let activeOscs = [];
@@ -3960,8 +4015,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
         window.addEventListener(evt, unlockAudio, { once: true, passive: true });
       });
 
-      // Initialize sound on by default
-      startAudio(false);
+      // Sound stays off until the visitor explicitly enables it.
 
       // Expose to window for CLI control
       window._toggleSynth = toggleAudio;
@@ -4048,21 +4102,21 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
         whoami: () => {
           printLine('USER: Noel Mendoza', 'banner');
           printLine('PROGRAM: Bachelor of Computer Applications (BCA) — 1st Year');
-          printLine('FOCUS: Cybersecurity, Systems Programming, OSINT & OPSEC');
+          printLine('FOCUS: Software engineering with a security focus');
           printLine('PHILOSOPHY: First-principles engineering — analyzing packets & memory before running tools.');
         },
         skills: () => {
           printLine('TECHNICAL CAPABILITIES:', 'banner');
-          printLine('  [+] <span class="term-highlight">CORE SYSTEMS:</span> C (University Core), C++, Java, Linux CLI (Daily Driver), Git');
-          printLine('  [+] <span class="term-highlight">SECURITY:</span> OPSEC & Compartmentalization, OSINT Methodology, Wireshark, MITRE ATT&CK');
-          printLine('  [+] <span class="term-highlight">ROADMAP:</span> Python & Rust, TryHackMe, HackTheBox, Web App Security (OWASP)');
+          printLine('  [+] <span class="term-highlight">USED / FOUNDATIONS:</span> C coursework, C++ and Java foundations, Linux CLI, Git, technical writing');
+          printLine('  [+] <span class="term-highlight">RESEARCH / PRACTICE:</span> OPSEC, OSINT methodology, Wireshark, MITRE ATT&CK mapping');
+          printLine('  [+] <span class="term-highlight">LEARNING NEXT:</span> Python, Rust, security labs, web security fundamentals');
         },
         projects: () => {
-          printLine('SELECTED WRITEUPS & LABS:', 'banner');
+          printLine('SELECTED PROJECTS & RESEARCH:', 'banner');
           printLine('  01. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">OSINT Self-Audit: Digital Footprint Mapping & Lockdown</a>');
           printLine('  02. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Synthetic Persona Research: Attribution & Unmasking Vectors</a>');
           printLine('  03. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Threat Intel Report: CVE Breakdown & MITRE ATT&CK Mapping</a>');
-          printLine('  04. <a href="#project-portfolio-build" style="color:var(--accent-green); text-decoration:underline;">Portfolio Engine: Living Canvas & CLI Shell [Live]</a>');
+          printLine('  04. <a href="#project-portfolio-build" style="color:var(--accent-green); text-decoration:underline;">Portfolio Engine: Living Canvas & CLI Shell [Live + GitHub]</a>');
           printLine('  05. <a href="#projects" style="color:var(--text-dim); text-decoration:none;">Packet Capture & Protocol Anomaly Analysis [In Progress]</a>');
         },
         build: () => {

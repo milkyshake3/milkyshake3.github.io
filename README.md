@@ -1,6 +1,6 @@
 # Noel Mendoza // Portfolio & Security Lab
 
-> **1st-Year BCA Student // Systems Programming, Cybersecurity, OSINT & OPSEC**  
+> **1st-Year BCA Student // Software Engineering with a Security Focus**
 > *"grow wings and fly • zero tracking • self-contained"*
 
 ---
@@ -25,10 +25,10 @@ The aesthetic blends aerospace telemetry, architectural grid blueprints, and ret
   - Keybindings: Press **``` ` ```** (backtick) / **`~`** or **`ESC`** to toggle.
   - Recon commands: `whoami`, `skills`, `projects`, `contact`, `pgp`, `sound [on|off]`, `motion [calm|static]`, `clear`, `exit`.
 
-- **🎵 M83-Inspired Native Web Audio Synthesizer**:
+- **🎵 Opt-in Native Web Audio Synthesizer**:
   - **100% Offline & Asset-Free**: Synthesized natively using browser `AudioContext` and oscillators — zero MP3/WAV files, zero network bandwidth.
   - Celestial chord progression (**F#m $\rightarrow$ A $\rightarrow$ D $\rightarrow$ E**) with warm low-pass filters, subtle detuning, a deep sub drone, and stratospheric filtered air.
-  - Active on by default, toggled via top navigation `[ SOUND: ON / OFF ]` or through the CLI.
+  - Off by default; enabled explicitly via top navigation `[ SOUND: ON / OFF ]` or through the CLI.
 
 - **📋 Tactile HUD Toast & One-Click Contact**:
   - One-click **`[ copy email ]`** button with clipboard write and instant luminous HUD toast notification.
@@ -47,9 +47,9 @@ The aesthetic blends aerospace telemetry, architectural grid blueprints, and ret
 
 | Domain | Technologies & Skills |
 | :--- | :--- |
-| **Core Systems (BCA Track)** | **C** (University Core — pointers, memory, low-level I/O), **C++**, **Java**, **Linux CLI**, **Git** |
-| **Cybersecurity & Recon** | **OPSEC** & Compartmentalization, **OSINT** Surface Mapping, **Wireshark** & Packet Analysis, **MITRE ATT&CK** |
-| **Roadmap & Labs (In Progress)** | **Python** & **Rust**, **TryHackMe**, **HackTheBox**, **OWASP Top 10** |
+| **Used / Foundations** | **C** coursework (pointers, memory, low-level I/O), **C++**, **Java**, **Linux CLI**, **Git**, technical writing |
+| **Research / Practice** | **OPSEC** & privacy research, **OSINT** surface mapping, **Wireshark** & packet analysis, **MITRE ATT&CK** mapping |
+| **Learning Next** | **Python**, **Rust**, security labs, and **OWASP Top 10** fundamentals |
 | **Frontend Engineering** | Native HTML5 Canvas 2D, Web Audio API, Vanilla JavaScript (ES6+), Modern CSS3 Grid/Flexbox |
 
 ---
