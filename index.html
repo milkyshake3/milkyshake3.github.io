@@ -1977,8 +1977,8 @@
 
       <!-- Real-Time Aerospace Flight Telemetry Panel -->
       <div class="hero-telemetry-panel" id="hero-telemetry-panel" aria-hidden="true">
-        <div class="telemetry-row"><span class="tel-label">SYSTEM</span><span class="tel-val green">● OPSEC //
-            ARMED</span></div>
+        <div class="telemetry-row"><span class="tel-label">SYSTEM</span><span class="tel-val green">● BUILD //
+            ONLINE</span></div>
         <div class="telemetry-row"><span class="tel-label">FLIGHT</span><span class="tel-val cyan" id="tel-flight">LIFT
             +0.2G</span></div>
         <div class="telemetry-row"><span class="tel-label">ATTITUDE</span><span class="tel-val" id="tel-attitude">+0.4°
@@ -2078,15 +2078,128 @@
          ==================================================================== -->
     <section id="projects" class="content-section">
       <div class="section-header">
-        <div class="section-num">02 // RESEARCH &amp; WRITEUPS</div>
+        <div class="section-num">02 // PROJECTS &amp; WRITEUPS</div>
         <h2 class="section-title">Selected Projects</h2>
       </div>
 
       <div class="projects-stack">
 
-        <!-- Project 1: OSINT Self-Audit -->
+        <!-- Project 1: Portfolio Engine & Living Canvas -->
+        <article class="project-entry" id="project-portfolio-build">
+          <div class="project-summary-bar" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)">
+            <div class="project-headline">
+              <div class="project-tag-row">
+                <span class="tag-badge"
+                  style="color:var(--accent-green); background:rgba(0,255,102,0.12); border:1px solid rgba(0,255,102,0.3);">LIVE
+                  SYSTEM</span>
+                <span class="tag-badge">CANVAS 2D</span>
+                <span class="tag-badge">WEB AUDIO API</span>
+                <span class="tag-badge dim">ZERO-DEP</span>
+              </div>
+              <h3 class="project-name">Portfolio Engine: Terminal-Style Living Canvas &amp; CLI Shell</h3>
+              <p class="project-short-desc">
+                Terminal-style portfolio, no trackers, no external dependencies — engineered from first principles with
+                an offline Web Audio synthesizer, CRT terminal drawer, and authentic 24-frame dot-matrix kinematics.
+              </p>
+            </div>
+            <span class="expand-indicator">[+]</span>
+          </div>
+
+          <div class="project-writeup-body">
+            <div class="writeup-section">
+              <div class="writeup-heading">Live Site &amp; Source</div>
+              <p>
+                <a href="https://noelbuilds.dev/" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">Open the live site ↗</a>
+                <span style="color:var(--panel-border);"> • </span>
+                <a href="https://github.com/milkyshake3/personal-website" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">View the GitHub repository ↗</a>
+              </p>
+            </div>
+            <div class="writeup-section">
+              <div class="writeup-heading">Architecture &amp; Design Principles</div>
+              <p>
+                Terminal-style portfolio, no trackers, no external dependencies. Engineered from first principles in a
+                single self-contained file with zero build step, zero third-party scripts, and zero external media
+                assets.
+              </p>
+            </div>
+
+            <div class="writeup-section">
+              <div class="writeup-heading">Core Features</div>
+              <ul class="writeup-list">
+                <li><strong>CLI Shell:</strong> Interactive slide-down CRT terminal with history buffer (`~` / `ESC`)
+                  and custom recon commands.</li>
+                <li><strong>Sound Toggle:</strong> M83-inspired native Web Audio API synthesizer with low-pass filters —
+                  zero audio files.</li>
+                <li><strong>Calm-Motion Mode:</strong> Dual motion accessibility modes (calm continuous flight vs.
+                  static snapshot).</li>
+                <li><strong>ASCII / Dot-Matrix Bird:</strong> Authentic 24-frame dot-matrix eagle flapping loop rendered
+                  on an architectural CAD pitch grid.</li>
+              </ul>
+            </div>
+
+            <div class="writeup-section">
+              <div class="writeup-heading">Implementation Snippets (simplified)</div>
+
+              <!-- Snippet 1 -->
+              <div class="snippet-block">
+                <div class="snippet-header">
+                  <span class="snippet-title">01. BIRD FRAME SELECTION &amp; KINEMATIC MAPPING</span>
+                  <button class="snippet-copy-btn" data-snippet="card-bird-code" type="button">[ copy snippet ]</button>
+                </div>
+                <pre class="snippet-code" id="snippet-card-bird-code"><code><span class="c-comment">// 12 FPS flap loop synchronized with dynamic reticle center</span>
+<span class="c-kw">const</span> frameDuration = <span class="c-num">1000</span> / <span class="c-num">12</span>;
+<span class="c-kw">const</span> frameIndex = isStatic ? <span class="c-num">0</span> : (<span class="c-fn">Math.floor</span>(now / frameDuration) % BIRD_FRAMES.length);
+<span class="c-kw">const</span> currentDots = BIRD_FRAMES[frameIndex];
+
+<span class="c-kw">const</span> eagleAnchorX = reticleCenterX - <span class="c-num">15</span> * dotPitch;
+<span class="c-kw">const</span> eagleAnchorY = reticleCenterY - <span class="c-num">38</span> * dotPitch;
+
+<span class="c-kw">for</span> (<span class="c-kw">let</span> i = <span class="c-num">0</span>; i &lt; currentDots.length; i++) {
+  <span class="c-kw">const</span> [col, row] = currentDots[i];
+  <span class="c-kw">const</span> px = eagleAnchorX + col * dotPitch;
+  <span class="c-kw">const</span> py = eagleAnchorY + row * dotPitch;
+  ctx.<span class="c-fn">fillRect</span>(px, py, dotSize, dotSize);
+}</code></pre>
+              </div>
+
+              <!-- Snippet 2 -->
+              <div class="snippet-block">
+                <div class="snippet-header">
+                  <span class="snippet-title">02. SHELL COMMAND TOKENIZER &amp; DISPATCH</span>
+                  <button class="snippet-copy-btn" data-snippet="card-cli-code" type="button">[ copy snippet ]</button>
+                </div>
+                <pre class="snippet-code" id="snippet-card-cli-code"><code><span class="c-comment">// Tokenizes user input, maintains history, and routes to registry</span>
+input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</span>, (e) =&gt; {
+  <span class="c-kw">if</span> (e.key !== <span class="c-str">'Enter'</span>) <span class="c-kw">return</span>;
+  <span class="c-kw">const</span> raw = input.value.<span class="c-fn">trim</span>();
+  input.value = <span class="c-str">''</span>;
+  <span class="c-kw">if</span> (!raw) <span class="c-kw">return</span>;
+
+  cmdHistory.<span class="c-fn">push</span>(raw);
+  <span class="c-fn">printLine</span>(<span class="c-str">`&lt;span class="terminal-prompt"&gt;noel@sec-lab:~$</span> ${raw}`</span>);
+
+  <span class="c-kw">const</span> [cmd, ...args] = raw.<span class="c-fn">split</span>(<span class="c-str">/\s+/</span>);
+  <span class="c-kw">const</span> handler = COMMANDS[cmd.<span class="c-fn">toLowerCase</span>()];
+  <span class="c-kw">if</span> (handler) handler(args);
+  <span class="c-kw">else</span> <span class="c-fn">printLine</span>(<span class="c-str">`Command not found: ${cmd}. Type 'help'.`</span>, <span class="c-str">'error'</span>);
+});</code></pre>
+              </div>
+            </div>
+
+            <div class="writeup-section" style="margin-top: 1.3rem;">
+              <button class="btn-terminal primary open-build-modal-btn" type="button"
+                style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
+                [ ↗ launch build specs popup ]
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: OSINT Self-Audit -->
         <article class="project-entry">
-          <div class="project-summary-bar" onclick="toggleProject(this)">
+          <div class="project-summary-bar" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)">
             <div class="project-headline">
               <div class="project-tag-row">
                 <span class="tag-badge">OSINT</span>
@@ -2137,9 +2250,9 @@
           </div>
         </article>
 
-        <!-- Project 2: Synthetic Persona Research -->
+        <!-- Project 3: Synthetic Persona Research -->
         <article class="project-entry">
-          <div class="project-summary-bar" onclick="toggleProject(this)">
+          <div class="project-summary-bar" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)">
             <div class="project-headline">
               <div class="project-tag-row">
                 <span class="tag-badge">RESEARCH</span>
@@ -2195,9 +2308,9 @@
           </div>
         </article>
 
-        <!-- Project 3: Threat Intel Report -->
+        <!-- Project 4: Threat Intel Report -->
         <article class="project-entry">
-          <div class="project-summary-bar" onclick="toggleProject(this)">
+          <div class="project-summary-bar" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)">
             <div class="project-headline">
               <div class="project-tag-row">
                 <span class="tag-badge">THREAT INTEL</span>
@@ -2247,120 +2360,7 @@
           </div>
         </article>
 
-        <!-- Project 4: Portfolio Engine & Living Canvas -->
-        <article class="project-entry" id="project-portfolio-build">
-          <div class="project-summary-bar" onclick="toggleProject(this)">
-            <div class="project-headline">
-              <div class="project-tag-row">
-                <span class="tag-badge"
-                  style="color:var(--accent-green); background:rgba(0,255,102,0.12); border:1px solid rgba(0,255,102,0.3);">LIVE
-                  SYSTEM</span>
-                <span class="tag-badge">CANVAS 2D</span>
-                <span class="tag-badge">WEB AUDIO API</span>
-                <span class="tag-badge dim">ZERO-DEP</span>
-              </div>
-              <h3 class="project-name">Portfolio Engine: Terminal-Style Living Canvas &amp; CLI Shell</h3>
-              <p class="project-short-desc">
-                Terminal-style portfolio, no trackers, no external dependencies — engineered from first principles with
-                an offline Web Audio synthesizer, CRT terminal drawer, and authentic 24-frame dot-matrix kinematics.
-              </p>
-            </div>
-            <span class="expand-indicator">[+]</span>
-          </div>
-
-          <div class="project-writeup-body">
-            <div class="writeup-section">
-              <div class="writeup-heading">Live Site &amp; Source</div>
-              <p>
-                <a href="https://noelbuilds.dev/" target="_blank" rel="noopener noreferrer"
-                  class="contact-link">Open the live site ↗</a>
-                <span style="color:var(--panel-border);"> • </span>
-                <a href="https://github.com/milkyshake3/personal-website" target="_blank" rel="noopener noreferrer"
-                  class="contact-link">View the GitHub repository ↗</a>
-              </p>
-            </div>
-            <div class="writeup-section">
-              <div class="writeup-heading">Architecture &amp; Design Principles</div>
-              <p>
-                Terminal-style portfolio, no trackers, no external dependencies. Engineered from first principles in a
-                single self-contained file with zero build step, zero third-party scripts, and zero external media
-                assets.
-              </p>
-            </div>
-
-            <div class="writeup-section">
-              <div class="writeup-heading">Core Features</div>
-              <ul class="writeup-list">
-                <li><strong>CLI Shell:</strong> Interactive slide-down CRT terminal with history buffer (`~` / `ESC`)
-                  and custom recon commands.</li>
-                <li><strong>Sound Toggle:</strong> M83-inspired native Web Audio API synthesizer with low-pass filters —
-                  zero audio files.</li>
-                <li><strong>Calm-Motion Mode:</strong> Dual motion accessibility modes (calm continuous flight vs.
-                  static snapshot).</li>
-                <li><strong>ASCII / Dot-Matrix Bird:</strong> Authentic 24-frame dot-matrix eagle flapping loop rendered
-                  on an architectural CAD pitch grid.</li>
-              </ul>
-            </div>
-
-            <div class="writeup-section">
-              <div class="writeup-heading">Clever Implementation Snippets</div>
-
-              <!-- Snippet 1 -->
-              <div class="snippet-block">
-                <div class="snippet-header">
-                  <span class="snippet-title">01. BIRD FRAME SELECTION &amp; KINEMATIC MAPPING</span>
-                  <button class="snippet-copy-btn" data-snippet="card-bird-code" type="button">[ copy snippet ]</button>
-                </div>
-                <pre class="snippet-code" id="snippet-card-bird-code"><code><span class="c-comment">// 12 FPS flap loop synchronized with dynamic reticle center</span>
-<span class="c-kw">const</span> frameDuration = <span class="c-num">1000</span> / <span class="c-num">12</span>;
-<span class="c-kw">const</span> frameIndex = isStatic ? <span class="c-num">0</span> : (<span class="c-fn">Math.floor</span>(now / frameDuration) % BIRD_FRAMES.length);
-<span class="c-kw">const</span> currentDots = BIRD_FRAMES[frameIndex];
-
-<span class="c-kw">const</span> eagleAnchorX = reticleCenterX - <span class="c-num">15</span> * dotPitch;
-<span class="c-kw">const</span> eagleAnchorY = reticleCenterY - <span class="c-num">38</span> * dotPitch;
-
-<span class="c-kw">for</span> (<span class="c-kw">let</span> i = <span class="c-num">0</span>; i &lt; currentDots.length; i++) {
-  <span class="c-kw">const</span> [col, row] = currentDots[i];
-  <span class="c-kw">const</span> px = eagleAnchorX + col * dotPitch;
-  <span class="c-kw">const</span> py = eagleAnchorY + row * dotPitch;
-  ctx.<span class="c-fn">fillRect</span>(px, py, dotSize, dotSize);
-}</code></pre>
-              </div>
-
-              <!-- Snippet 2 -->
-              <div class="snippet-block">
-                <div class="snippet-header">
-                  <span class="snippet-title">02. SHELL COMMAND TOKENIZER &amp; DISPATCH</span>
-                  <button class="snippet-copy-btn" data-snippet="card-cli-code" type="button">[ copy snippet ]</button>
-                </div>
-                <pre class="snippet-code" id="snippet-card-cli-code"><code><span class="c-comment">// Tokenizes user input, maintains history, and routes to registry</span>
-input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</span>, (e) =&gt; {
-  <span class="c-kw">if</span> (e.key !== <span class="c-str">'Enter'</span>) <span class="c-kw">return</span>;
-  <span class="c-kw">const</span> raw = input.value.<span class="c-fn">trim</span>();
-  input.value = <span class="c-str">''</span>;
-  <span class="c-kw">if</span> (!raw) <span class="c-kw">return</span>;
-
-  cmdHistory.<span class="c-fn">push</span>(raw);
-  <span class="c-fn">printLine</span>(<span class="c-str">`&lt;span class="prompt"&gt;noel@sec-lab:~$</span> ${raw}`</span>);
-
-  <span class="c-kw">const</span> [cmd, ...args] = raw.<span class="c-fn">split</span>(<span class="c-str">/\s+/</span>);
-  <span class="c-kw">const</span> handler = COMMANDS[cmd.<span class="c-fn">toLowerCase</span>()];
-  <span class="c-kw">if</span> (handler) handler(args);
-  <span class="c-kw">else</span> <span class="c-fn">printLine</span>(<span class="c-str">`Command not found: ${cmd}. Type 'help'.`</span>, <span class="c-str">'error'</span>);
-});</code></pre>
-              </div>
-            </div>
-
-            <div class="writeup-section" style="margin-top: 1.3rem;">
-              <button class="btn-terminal primary open-build-modal-btn" type="button"
-                style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
-                [ ↗ launch build specs popup ]
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 5: Upcoming Slot -->
+<!-- Project 5: Upcoming Slot -->
         <article class="project-entry" style="opacity: 0.65;">
           <div class="project-summary-bar" style="cursor: default;">
             <div class="project-headline">
@@ -2488,24 +2488,23 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
                 <span class="skill-name">Python</span>
                 <span class="skill-status learning">Starting</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Planned for small, documented automation tools;
-                not presented as an established skill yet.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Next: small, documented automation tools for my
+                OSINT workflow.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Rust &amp; Security Labs</span>
                 <span class="skill-status learning">Future Track</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">Planned learning areas after core programming
-                projects.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Next: memory-safe systems programming after core
+                C/C++ projects.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
                 <span class="skill-name">Web Security Fundamentals</span>
                 <span class="skill-status learning">Planned</span>
               </div>
-              <div style="font-size:0.8rem; color:var(--text-dim);">A future study track; no completed lab is claimed
-                here.</div>
+              <div style="font-size:0.8rem; color:var(--text-dim);">Next: OWASP Top 10, HTTP headers, and secure app design.</div>
             </li>
             <li class="skill-entry">
               <div class="skill-meta">
@@ -2570,6 +2569,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
               <span style="color:var(--text-dim);">FINGERPRINT:</span> <span style="color:var(--accent-green);">ede9
                 a793 9d24 fe6b cd66 f31d 89b2 16a3 16a5 613e</span>
             </div>
+            <div style="font-size:0.76rem; color:var(--text-dim); margin-bottom:0.8rem;">Encrypted mail: use this key with the alias noel.slate734@passfwd.com</div>
             <pre class="pgp-key-block">-----BEGIN PGP PUBLIC KEY BLOCK-----
 mDMEaoBU2RYJKwYBBAHaRw8BAQdAbq6vTEs12FLCDwus2Kmp0bCpSunr0eu8tPrM
 H4mg3aa0IE5vZWwgPG5vZWwuc2xhdGU3MzRAcGFzc2Z3ZC5jb20+iHIEExYIABoE
@@ -2589,7 +2589,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
     <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-primary-row">
-        <span>noel mendoza // bca &amp; cybersecurity portfolio</span>
+        <span>noel mendoza // bca portfolio</span>
         <span class="footer-sep">•</span>
         <button id="see-build-footer-btn" class="footer-build-btn open-build-modal-btn" type="button"
           title="View portfolio architecture, features, and source snippets">
@@ -2654,7 +2654,7 @@ g4/pJ9GS9VMb1qPskAD/VNn1oyPcGqxVqDRLkMYqGdKPwGvF9Abd9DEB2IcaUgY=
 
         <!-- Implementation Snippets Section -->
         <div class="build-snippets-section">
-          <div class="snippets-heading">// IMPLEMENTATION SNIPPETS (CLEVER &amp; CONCISE)</div>
+          <div class="snippets-heading">// IMPLEMENTATION SNIPPETS (SIMPLIFIED)</div>
 
           <!-- Snippet 1: Bird Frame Selection -->
           <div class="snippet-block">
@@ -2692,7 +2692,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
   <span class="c-kw">if</span> (!raw) <span class="c-kw">return</span>;
 
   cmdHistory.<span class="c-fn">push</span>(raw);
-  <span class="c-fn">printLine</span>(<span class="c-str">`&lt;span class="prompt"&gt;noel@sec-lab:~$</span> ${raw}`</span>);
+  <span class="c-fn">printLine</span>(<span class="c-str">`&lt;span class="terminal-prompt"&gt;noel@sec-lab:~$</span> ${raw}`</span>);
 
   <span class="c-kw">const</span> [cmd, ...args] = raw.<span class="c-fn">split</span>(<span class="c-str">/\s+/</span>);
   <span class="c-kw">const</span> handler = COMMANDS[cmd.<span class="c-fn">toLowerCase</span>()];
@@ -2807,11 +2807,31 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
       //    - 'STATIC' (Frozen snapshot for vestibular disorders / migraine sensitivity)
       // -----------------------------------------------------------------------
       const MOTION_MODES = ['CALM', 'STATIC'];
-      let savedMode = localStorage.getItem('noel_motion_mode');
+      let inMemoryMotionMode = null;
+      function readMotionPreference() {
+        try {
+          return localStorage.getItem('noel_motion_mode');
+        } catch (error) {
+          return inMemoryMotionMode;
+        }
+      }
+      function writeMotionPreference(mode) {
+        inMemoryMotionMode = mode;
+        try {
+          localStorage.setItem('noel_motion_mode', mode);
+        } catch (error) {
+          // Keep the preference in memory when storage is blocked.
+        }
+      }
+
+      let savedMode = readMotionPreference();
       if (!MOTION_MODES.includes(savedMode)) {
         savedMode = null;
       }
-      let currentMotionMode = savedMode || 'CALM';
+      const reducedMotionRequested = !savedMode
+        && window.matchMedia
+        && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let currentMotionMode = savedMode || (reducedMotionRequested ? 'STATIC' : 'CALM');
 
       const motionBtn = document.getElementById('motion-toggle-btn');
       const motionLabel = document.getElementById('motion-label');
@@ -2844,7 +2864,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
       function setMotion(mode) {
         if (!MOTION_MODES.includes(mode)) return;
         currentMotionMode = mode;
-        localStorage.setItem('noel_motion_mode', currentMotionMode);
+        writeMotionPreference(currentMotionMode);
         updateMotionUI();
 
         if (currentMotionMode === 'STATIC') {
@@ -2853,6 +2873,9 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
         } else {
           stopAnimation();
           startAnimation();
+        }
+        if (window._setGlobeMotion) {
+          window._setGlobeMotion(currentMotionMode);
         }
       }
 
@@ -2864,6 +2887,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
       }
 
       window._setMotionMode = setMotion;
+      window._getMotionMode = () => currentMotionMode;
 
       // Scroll-Driven Canvas Dimming (Fades canvas to 15% opacity when reading content)
       window.addEventListener('scroll', () => {
@@ -3563,6 +3587,8 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
       const aspect = 2.05;
 
       let rotation = 0.6;
+      let globeMotionMode = window._getMotionMode ? window._getMotionMode() : 'CALM';
+      let globeAnimationFrameId = null;
       const tilt = 0.38;
       const cosTilt = Math.cos(tilt);
       const sinTilt = Math.sin(tilt);
@@ -3605,7 +3631,9 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
       }
 
       function renderFrame() {
-        rotation += 0.0075; // Calm, steady rotation
+        if (globeMotionMode !== 'STATIC') {
+          rotation += 0.0075; // Calm, steady rotation
+        }
         let out = "";
 
         const cosRot = Math.cos(rotation);
@@ -3703,10 +3731,31 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
           coordsEl.textContent = `LAT: ${Math.abs(satDegLat)}°${latDir}  LON: ${Math.abs(satDegLon)}°${lonDir}`;
         }
 
-        requestAnimationFrame(renderFrame);
+        if (globeMotionMode !== 'STATIC') {
+          globeAnimationFrameId = requestAnimationFrame(renderFrame);
+        } else {
+          globeAnimationFrameId = null;
+        }
       }
 
-      requestAnimationFrame(renderFrame);
+      window._setGlobeMotion = (mode) => {
+        globeMotionMode = mode;
+        if (globeMotionMode === 'STATIC') {
+          if (globeAnimationFrameId) {
+            cancelAnimationFrame(globeAnimationFrameId);
+            globeAnimationFrameId = null;
+          }
+          renderFrame();
+        } else if (!globeAnimationFrameId) {
+          globeAnimationFrameId = requestAnimationFrame(renderFrame);
+        }
+      };
+
+      if (globeMotionMode === 'STATIC') {
+        renderFrame();
+      } else {
+        globeAnimationFrameId = requestAnimationFrame(renderFrame);
+      }
     })();
 
 
@@ -3724,15 +3773,27 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
           openCard.classList.remove('expanded');
           const ind = openCard.querySelector('.expand-indicator');
           if (ind) ind.textContent = '[+]';
+          const openHeader = openCard.querySelector('.project-summary-bar[role="button"]');
+          if (openHeader) openHeader.setAttribute('aria-expanded', 'false');
         }
       });
 
       card.classList.toggle('expanded', !isExpanded);
+      headerEl.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
       const indicator = card.querySelector('.expand-indicator');
       if (indicator) {
         indicator.textContent = isExpanded ? '[+]' : '[−]';
       }
     }
+
+    document.querySelectorAll('.project-summary-bar[role="button"]').forEach(summary => {
+      summary.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleProject(summary);
+        }
+      });
+    });
 
     // -------------------------------------------------------------------------
     // 4. CYBER SCROLL PROGRESS BAR (Luminous 1.5px top indicator)
@@ -4090,7 +4151,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
           printLine('AVAILABLE COMMANDS:', 'banner');
           printLine('  <span class="term-highlight">whoami</span>       - Display identity & BCA student profile');
           printLine('  <span class="term-highlight">skills</span>       - List technical capabilities & languages');
-          printLine('  <span class="term-highlight">projects</span>     - List selected research & writeup labs');
+          printLine('  <span class="term-highlight">projects</span>     - List selected projects & writeup labs');
           printLine('  <span class="term-highlight">build</span>        - Open portfolio architecture & source specs');
           printLine('  <span class="term-highlight">contact</span>      - Output verified links & email');
           printLine('  <span class="term-highlight">pgp</span>          - Display OPSEC cryptographic fingerprint');
@@ -4113,10 +4174,10 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
         },
         projects: () => {
           printLine('SELECTED PROJECTS & RESEARCH:', 'banner');
-          printLine('  01. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">OSINT Self-Audit: Digital Footprint Mapping & Lockdown</a>');
-          printLine('  02. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Synthetic Persona Research: Attribution & Unmasking Vectors</a>');
-          printLine('  03. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Threat Intel Report: CVE Breakdown & MITRE ATT&CK Mapping</a>');
-          printLine('  04. <a href="#project-portfolio-build" style="color:var(--accent-green); text-decoration:underline;">Portfolio Engine: Living Canvas & CLI Shell [Live + GitHub]</a>');
+          printLine('  01. <a href="#project-portfolio-build" style="color:var(--accent-green); text-decoration:underline;">Portfolio Engine: Living Canvas & CLI Shell [Live + GitHub]</a>');
+          printLine('  02. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">OSINT Self-Audit: Digital Footprint Mapping & Lockdown</a>');
+          printLine('  03. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Synthetic Persona Research: Attribution & Unmasking Vectors</a>');
+          printLine('  04. <a href="#projects" style="color:var(--accent-cyan); text-decoration:underline;">Threat Intel Report: CVE Breakdown & MITRE ATT&CK Mapping</a>');
           printLine('  05. <a href="#projects" style="color:var(--text-dim); text-decoration:none;">Packet Capture & Protocol Anomaly Analysis [In Progress]</a>');
         },
         build: () => {
@@ -4156,8 +4217,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
               window._setMotionMode(mode);
               printLine(`[+] Canvas motion set to ${mode}.`, 'success');
             } else {
-              localStorage.setItem('noel_motion_mode', mode);
-              location.reload();
+              printLine('Motion control is unavailable until the canvas initializes.', 'error');
             }
           } else {
             printLine('Usage: motion [calm | static]', 'error');
