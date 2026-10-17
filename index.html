@@ -3267,6 +3267,7 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
       const telAttitude = document.getElementById('tel-attitude');
       const telRange = document.getElementById('tel-range');
       const telBearing = document.getElementById('tel-bearing');
+      const telPhase = document.getElementById('tel-phase');
 
       // -----------------------------------------------------------------------
       // 5. HIGH-END CINEMATIC RENDER ENGINE (Ground-anchored, zero motion sickness)
@@ -3417,6 +3418,11 @@ input.<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</
 
         const hSpacing = 160 * scale;
         const vSpacing = 180 * scale;
+
+        if (telPhase) {
+          const gridPhase = ((screenHMid % hSpacing) + hSpacing) % hSpacing;
+          telPhase.textContent = `${gridPhase.toFixed(2)} px`;
+        }
 
         // Outer horizontal lines
         ctx.beginPath();
