@@ -5,8 +5,6 @@
 
 Live site: [https://noelbuilds.dev](https://noelbuilds.dev)
 
-[ADD SCREENSHOT]
-
 ---
 
 ## Overview
